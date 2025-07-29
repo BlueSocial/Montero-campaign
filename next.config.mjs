@@ -27,6 +27,14 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Ensure proper routing for Vercel deployment
+  trailingSlash: false,
+  async redirects() {
+    return []
+  },
+  async rewrites() {
+    return []
+  }
 }
 
 if (userConfig) {

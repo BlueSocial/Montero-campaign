@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { submitForm } from "./actions/form-actions"
+import { submitForm } from "@/app/actions/form-actions"
 import { useToast } from "@/hooks/use-toast"
 
 export default function GetInvolved() {

@@ -6,7 +6,7 @@ import WaveBackground from "@/components/wave-background"
 import PriorityCard from "@/components/priority-card"
 
 import DonationForm from "@/components/donation-form"
-import GetInvolved from "./get-involved"
+import GetInvolved from "@/components/get-involved"
 import AnimatedHeadline from "@/components/AnimatedHeadline"
 import Link from "next/link"
 
