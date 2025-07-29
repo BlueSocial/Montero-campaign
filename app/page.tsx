@@ -1,12 +1,14 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Users, HomeIcon, Shield, Leaf, ChevronRight } from "lucide-react"
+import { CheckCircle, Users, HomeIcon, Shield, Leaf, ChevronRight, Building2, MapPin, Heart, TreePine, Palette } from "lucide-react"
 import Header from "@/components/header"
 import WaveBackground from "@/components/wave-background"
 import PriorityCard from "@/components/priority-card"
-import TestimonialCarousel from "@/components/testimonial-carousel"
+
 import DonationForm from "@/components/donation-form"
 import GetInvolved from "./get-involved"
+import AnimatedHeadline from "@/components/AnimatedHeadline"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -14,33 +16,37 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/canyon-crest-riverside.png"
-            alt="Canyon Crest Riverside"
+            src="/Riverside_Hero.jpg"
+            alt="Riverside city landscape"
             fill
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-navy-blue/40" /> {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-navy-blue/50" /> {/* Adjusted overlay for better readability */}
         </div>
 
         <WaveBackground />
 
-        <div className="container mx-auto px-4 py-20 relative z-10 flex flex-col md:flex-row items-center">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">A New Voice for Ward 2</h1>
+            <AnimatedHeadline />
             <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
-              Together, we can build a more vibrant, inclusive Riverside.
+              It's time for leadership that reflects the strength, diversity, and determination of our community. By coming together, we can ensure every family, small business, and neighborhood has the resources and opportunity to thrive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-sky-blue hover:bg-sky-blue/90 text-white px-8 py-6 text-lg shadow-lg">
-                Endorse Christen
+              <Button asChild className="bg-sky-blue hover:bg-sky-blue/90 text-white px-8 py-6 text-lg shadow-lg">
+                <a href="#get-involved">
+                  Endorse Christen
+                </a>
               </Button>
-              <Button className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8 py-6 text-lg shadow-lg">
-                Donate Now
+              <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8 py-6 text-lg shadow-lg">
+                <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
+                  Donate Now
+                </a>
               </Button>
             </div>
           </div>
@@ -50,27 +56,47 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Scroll Down Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white text-center animate-bounce">
+          <p className="text-sm mb-2">Scroll Down</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="mx-auto"
+          >
+            <path d="M12 5v14" />
+            <path d="m19 12-7 7-7-7" />
+          </svg>
+        </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue">About Christen</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue">Meet Christen</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
-                src="/images/christen-speaking.png"
-                alt="Christen Montero speaking at a community event"
+                src="/Christen-podium.png"
+                alt="Christen Montero speaking at a podium"
                 width={500}
-                height={600}
-                className="rounded-lg shadow-lg object-cover"
+                height={500}
+                className="rounded-lg shadow-lg object-cover w-full h-auto"
               />
             </div>
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-navy-blue">Riverside Roots & Leadership</h3>
               <p className="mb-6 text-gray-700">
                 Christen Montero is a dedicated community leader with deep roots in Riverside. With over 15 years of
-                experience in community organizing and public service, Christen has consistently demonstrated a
+                experience in business, community development and advocacy, Christen has consistently demonstrated a
                 commitment to improving the lives of Ward 2 residents.
               </p>
 
@@ -94,7 +120,7 @@ export default function Home() {
                   <div>
                     <h4 className="font-semibold text-navy-blue">Education Advocate</h4>
                     <p className="text-gray-700">
-                      Worked with local schools to develop programs that support student success.
+                      Mentored students and connected them to opportunities in Science, Technology, Engineering, and Mathematics (STEM) and the creative arts.
                     </p>
                   </div>
                 </div>
@@ -112,10 +138,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button className="mt-8 bg-navy-blue hover:bg-navy-blue/90 text-white">
-                Learn More About Christen
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href="/about">
+                <Button className="mt-8 bg-navy-blue hover:bg-navy-blue/90 text-white">
+                  Learn More About Christen
+                  <ChevronRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -125,37 +153,45 @@ export default function Home() {
       <section id="priorities" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue">Core Priorities</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <PriorityCard
-              icon={<HomeIcon className="h-10 w-10" />}
-              title="Affordable Housing"
-              description="Create and preserve affordable housing options for all Riverside residents."
+              icon={<Building2 className="h-10 w-10" />}
+              title="Supporting Small Businesses"
+              description="Give small businesses the support they need to create safe, good-paying jobs closer to where people live."
               color="bg-sky-blue"
               delay={0}
             />
 
             <PriorityCard
-              icon={<Shield className="h-10 w-10" />}
-              title="Public Safety"
-              description="Enhance community safety through collaborative and innovative approaches."
+              icon={<MapPin className="h-10 w-10" />}
+              title="Affordable and Livable Neighborhoods"
+              description="Making neighborhoods more affordable, dynamic and livable by investing in core services and amenities that residents can easily walk or drive to."
               color="bg-golden-yellow"
               delay={200}
             />
 
             <PriorityCard
-              icon={<Users className="h-10 w-10" />}
-              title="Youth Programs"
-              description="Invest in our youth through expanded educational and recreational opportunities."
+              icon={<Heart className="h-10 w-10" />}
+              title="Public Safety"
+              description="Ensuring first responders have the resources they need to keep our community safe."
               color="bg-sky-blue"
               delay={400}
             />
 
             <PriorityCard
-              icon={<Leaf className="h-10 w-10" />}
-              title="Climate Resilience"
-              description="Develop sustainable solutions to address climate challenges in our community."
+              icon={<TreePine className="h-10 w-10" />}
+              title="Environment and Sustainability"
+              description="Fostering a healthier environment by expanding green spaces in neighborhoods for everyone to enjoy."
               color="bg-golden-yellow"
               delay={600}
+            />
+
+            <PriorityCard
+              icon={<Palette className="h-10 w-10" />}
+              title="Thriving Arts and Culture"
+              description="Building Riverside into a thriving cultural center by leveraging community assets like The Cheech to attract more restaurants, art galleries, cultural events, and festivals."
+              color="bg-sky-blue"
+              delay={800}
             />
           </div>
         </div>
@@ -165,11 +201,6 @@ export default function Home() {
       <section id="get-involved" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <GetInvolved />
-
-          <div className="mt-20">
-            <h3 className="text-2xl font-semibold text-center mb-10 text-navy-blue">What Our Community Says</h3>
-            <TestimonialCarousel />
-          </div>
         </div>
       </section>
 
@@ -183,12 +214,6 @@ export default function Home() {
           </p>
 
           <DonationForm />
-
-          <div className="mt-12 text-center">
-            <p className="text-sm opacity-80">
-              Contributions are not tax deductible. Individuals may contribute up to $4,900 per election.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -258,9 +283,8 @@ export default function Home() {
 
             <div>
               <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <p className="mb-2">Email: info@christenforriverside.com</p>
-              <p className="mb-2">Phone: (951) 555-1234</p>
-              <p>Campaign HQ: 123 Main St, Riverside, CA 92501</p>
+              <p className="mb-2">Email: Hello@votechristen.com</p>
+              <p>Phone: 951-406-4664</p>
             </div>
 
             <div>
@@ -282,7 +306,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="#donate" className="hover:text-golden-yellow transition-colors">
+                  <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer" className="hover:text-golden-yellow transition-colors">
                     Donate
                   </a>
                 </li>
@@ -290,9 +314,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm">
-            <p>Paid for by Christen Montero for City Council 2026</p>
-            <p className="mt-2">© 2025 Christen Montero Campaign. All Rights Reserved.</p>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+            <div className="inline-block border border-gray-300 bg-white text-gray-800 px-6 py-4 rounded-md shadow-sm">
+              <p className="text-sm">
+                Paid for by Christen Montero for Riverside City Council Ward 2 2026 ID# 1481381 c/o 728 W. Edna Place, Covina, CA 91722
+              </p>
+            </div>
           </div>
         </div>
       </footer>

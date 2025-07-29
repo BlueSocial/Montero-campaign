@@ -81,6 +81,10 @@ html {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-merriweather);
   }
 }
 
@@ -119,4 +123,30 @@ html {
 
 .border-sky-blue {
   border-color: #4396d2;
+}
+
+/* Custom font classes */
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-merriweather {
+  font-family: var(--font-merriweather);
+}
+
+/* Custom animations */
+@keyframes pulse-subtle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
 }

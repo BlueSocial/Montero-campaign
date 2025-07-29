@@ -18,7 +18,10 @@ export default function GetInvolved() {
     setEndorseLoading(true)
     try {
       const result = await submitForm("endorse", formData)
+      console.log('Form submission result:', result)
+      
       if (result.success) {
+        console.log('Showing success toast')
         toast({
           title: "Success!",
           description: "Your endorsement has been submitted.",
@@ -27,6 +30,7 @@ export default function GetInvolved() {
         const form = document.getElementById("endorseForm") as HTMLFormElement
         form?.reset()
       } else {
+        console.log('Showing error toast:', result.message)
         toast({
           title: "Error",
           description: result.message,
@@ -155,6 +159,16 @@ export default function GetInvolved() {
               {endorseLoading ? "Submitting..." : "Submit Endorsement"}
             </Button>
           </form>
+          
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-600 text-center">
+              By providing your email and mobile number, you agree to the{' '}
+              <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
+                privacy policy
+              </a>{' '}
+              and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+            </p>
+          </div>
         </TabsContent>
 
         <TabsContent value="volunteer" className="bg-white p-6 rounded-lg shadow-md">
