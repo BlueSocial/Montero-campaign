@@ -100,42 +100,14 @@ export default function Home() {
                 commitment to improving the lives of Ward 2 residents.
               </p>
 
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-sky-blue rounded-full p-2 mr-4 mt-1">
-                    <CheckCircle className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-navy-blue">Community Organizer</h4>
-                    <p className="text-gray-700">
-                      Led multiple community initiatives that improved local infrastructure and services.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-sky-blue rounded-full p-2 mr-4 mt-1">
-                    <CheckCircle className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-navy-blue">Education Advocate</h4>
-                    <p className="text-gray-700">
-                      Mentored students and connected them to opportunities in Science, Technology, Engineering, and Mathematics (STEM) and the creative arts.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-sky-blue rounded-full p-2 mr-4 mt-1">
-                    <CheckCircle className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-navy-blue">Business Development</h4>
-                    <p className="text-gray-700">
-                      Partnered with local businesses to create economic opportunities for residents.
-                    </p>
-                  </div>
-                </div>
+              <div className="bg-white border-l-4 border-sky-blue p-6 rounded-r-lg shadow-sm">
+                <blockquote className="text-gray-700 italic text-lg leading-relaxed">
+                  "Riverside is more than my hometown — it's where I was raised, where I built my business, and where I've spent my life investing in others.
+                  <br /><br />
+                  My family came here in search of opportunity, and we found it through strong schools, safe neighborhoods, and a supportive community. But today, those community values and opportunities that helped me succeed are slipping away.
+                  <br /><br />
+                  I'm running for City Council because I believe it's a time for a New Direction for Riverside to ensure every family, every small business, and every neighborhood has the resources and opportunity to thrive."
+                </blockquote>
               </div>
 
               <Link href="/about">

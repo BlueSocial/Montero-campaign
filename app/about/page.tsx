@@ -42,13 +42,10 @@ export default function AboutChristen() {
                 </h2>
                 <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    I'm Christen Montero, and Riverside isn't just where I live — it's where I was raised, where I built my business, and where I've spent my life investing in others. When my parents moved our family to Riverside, they were looking for opportunity — and they found it.
+                    Christen Montero is a businesswoman, entrepreneur, and STEM advocate with deep roots in Riverside. Her parents moved the family to Riverside in search of opportunity and they found a city that offered strong schools, good-paying jobs, safe neighborhoods, and a deep sense of community. Christen attended Taft Elementary School, Amelia Earhart Middle School, Martin Luther King Jr. High School, and Citrus High School, where supportive teachers and mentors nurtured her passion for the performing arts and introduced her to Riverside's dynamic culture of arts and innovation.
                   </p>
                   <p>
-                    I attended Amelia Earhart Middle School, Martin Luther King Jr. High School and Citrus High School, where I found supportive teachers and mentors who taught me the value of hard work. In addition to strong schools, we had access to good-paying jobs that allowed our parents to support us, safe neighborhoods where we could play, and a sense of community where working families could build a better future.
-                  </p>
-                  <p>
-                    But today, our political environment doesn't reflect the values that matter most to Riverside families, and the opportunities that once defined Riverside are becoming harder to find. I'm running for City Council because I believe it's a time for a New Direction for Riverside to ensure every family, every small business, and every neighborhood has the resources and opportunity to thrive.
+                    Today, our political environment no longer reflects the values that matter most to Riverside families, and the opportunities that once defined the city are growing harder to find. That's why Christen Montero is running for City Council — to offer a New Direction for Riverside that ensures every family, small business, and neighborhood has the resources and opportunity to thrive.
                   </p>
                 </div>
               </div>
@@ -82,14 +79,14 @@ export default function AboutChristen() {
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-navy-blue font-serif">
-                  Small business Entrepreneur
+                  Small Business Entrepreneur
                 </h2>
                 <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    As a small business entrepreneur founder of MCA, a marketing consulting agency, and co-founder of the software company Blue Social, I've helped small businesses grow, educate our younger generation and brought people together through technology.
+                    As the founder of MCA, a marketing consulting agency, and co-founder of the software company Blue Social, Christen has spent her career helping small businesses grow, mentoring the next generation, and using technology to bring people together.
                   </p>
                   <p>
-                    Through service on the Board of Directors for the Filipino Chamber of Commerce, and non-profit organizations like Salvaging Sisterhood and Women Wonder Writers, Ivepartnered with and mentored Inland Empire business leaders, students, and the younger generations working to overcome adverse circumstances.
+                    Her service as a Board of Director for the Filipino Chamber of Commerce and nonprofit organizations like Women Wonder Writers has allowed her to work closely with Inland Empire community leaders, students, and people overcoming adversity.
                   </p>
                 </div>
               </div>
@@ -107,7 +104,7 @@ export default function AboutChristen() {
                 Fighting for Riverside Families
               </h2>
               <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-                I understand the challenges working families face and hear every day from neighbors and community members who are struggling with rising costs, lack of affordable housing, and access to good jobs. That is why I will fight for solutions to these challenges by:
+                Christen understands the challenges working families face — rising costs, a lack of affordable housing, and limited access to quality jobs — because she hears about them daily from neighbors and community members. That is why she will fight for solutions to these challenges by:
               </p>
             </div>
 
@@ -116,7 +113,7 @@ export default function AboutChristen() {
                 <Building2 className="h-12 w-12 text-sky-blue mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-navy-blue">Supporting Small Businesses</h3>
                 <p className="text-gray-700">
-                  Give small businesses the support they need to create safe, good-paying jobs closer to where people live.
+                  to help create safe, good-paying jobs closer to where people live.
                 </p>
               </div>
 
@@ -124,7 +121,7 @@ export default function AboutChristen() {
                 <MapPin className="h-12 w-12 text-golden-yellow mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-navy-blue">Affordable and Livable Neighborhoods</h3>
                 <p className="text-gray-700">
-                  Making neighborhoods more affordable, dynamic and livable by investing in core services and amenities that residents can easily walk or drive to.
+                  by investing in core services, bringing in higher paying jobs and amenities that residents can easily walk or drive to.
                 </p>
               </div>
 
@@ -132,7 +129,7 @@ export default function AboutChristen() {
                 <Heart className="h-12 w-12 text-sky-blue mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-navy-blue">Public Safety</h3>
                 <p className="text-gray-700">
-                  Ensuring first responders have the resources they need to keep our community safe.
+                  to keep our community safe.
                 </p>
               </div>
 
@@ -140,7 +137,7 @@ export default function AboutChristen() {
                 <TreePine className="h-12 w-12 text-golden-yellow mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-navy-blue">Environment and Sustainability</h3>
                 <p className="text-gray-700">
-                  Fostering a healthier environment by expanding green spaces in neighborhoods for everyone to enjoy.
+                  by expanding green spaces in neighborhoods for everyone to enjoy.
                 </p>
               </div>
 
@@ -148,7 +145,7 @@ export default function AboutChristen() {
                 <Palette className="h-12 w-12 text-sky-blue mb-4" />
                 <h3 className="text-xl font-bold mb-3 text-navy-blue">Thriving Arts and Culture</h3>
                 <p className="text-gray-700">
-                  Building Riverside into a thriving cultural center by leveraging community assets like The Cheech to attract more restaurants, art galleries, cultural events, and festivals.
+                  by leveraging community assets like The Cheech to attract more restaurants, art galleries, cultural events, and festivals.
                 </p>
               </div>
             </div>
@@ -167,10 +164,10 @@ export default function AboutChristen() {
                 </h2>
                 <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    When I'm not working, I'm usually hiking Mt. Rubidoux, running with my two white German Shepherds, or caring for my farm animals. I grew up as a dancer since the age of 4, mentoring students and peers, while believing in the importance of moments of stillness within a busy world to keep us grounded.
+                    As a candidate for City Council, Christen is committed to action, not just ideas. She believes Riverside deserves leadership rooted in the community, guided by experience, and driven by a deep love for the city we call home.
                   </p>
                   <p>
-                    I am proud to have earned both a Bachelor of Arts (BA) and a Master of Business Administration (MBA) from the University of Redlands.
+                    When she's not working, Christen can often be found hiking Mt. Rubidoux, running with her two white German Shepherds, or caring for her farm animals. As a dancer since the age of four, she has long believed in the importance of balance and staying grounded in a fast-paced world. Christen holds both a Bachelor of Arts (BA) and a Master of Business Administration (MBA) from the University of Redlands.
                   </p>
                 </div>
               </div>

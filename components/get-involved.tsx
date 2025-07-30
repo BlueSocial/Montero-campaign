@@ -139,6 +139,20 @@ export default function GetInvolved() {
                 <Input id="lastName" name="lastName" placeholder="Last Name" required />
               </div>
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
+                  Title (Optional)
+                </label>
+                <Input id="title" name="title" placeholder="e.g., CEO, Teacher, etc." />
+              </div>
+              <div>
+                <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
+                  Organization (Optional)
+                </label>
+                <Input id="organization" name="organization" placeholder="e.g., Company, School, etc." />
+              </div>
+            </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Email
@@ -217,6 +231,16 @@ export default function GetInvolved() {
               {volunteerLoading ? "Submitting..." : "Join Our Team"}
             </Button>
           </form>
+          
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-600 text-center">
+              By providing your email and mobile number, you agree to the{' '}
+              <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
+                privacy policy
+              </a>{' '}
+              and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+            </p>
+          </div>
         </TabsContent>
 
         <TabsContent value="host" className="bg-white p-6 rounded-lg shadow-md">
@@ -271,6 +295,16 @@ export default function GetInvolved() {
               {hostLoading ? "Submitting..." : "Request to Host"}
             </Button>
           </form>
+          
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-600 text-center">
+              By providing your email and mobile number, you agree to the{' '}
+              <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
+                privacy policy
+              </a>{' '}
+              and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+            </p>
+          </div>
         </TabsContent>
       </Tabs>
     </div>
