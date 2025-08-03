@@ -31,6 +31,19 @@ export default function Home() {
 
         <WaveBackground />
 
+        {/* Hero Image - positioned behind wave but in front of background */}
+        <div className="absolute inset-0 z-5 flex items-center justify-end pr-8 md:pr-16 lg:pr-24">
+          <div className="relative h-full w-full md:w-1/2 lg:w-2/5 flex items-center justify-center">
+            <Image
+              src="/Christen - Hero.png"
+              alt="Christen Montero"
+              fill
+              className="object-contain object-center"
+              priority
+            />
+          </div>
+        </div>
+
         <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
             <AnimatedHeadline />
@@ -48,11 +61,6 @@ export default function Home() {
                   Donate Now
                 </a>
               </Button>
-            </div>
-          </div>
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-golden-yellow shadow-xl">
-              <Image src="/images/christen-hero.png" alt="Christen Montero" fill className="object-cover" priority />
             </div>
           </div>
         </div>
