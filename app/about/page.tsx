@@ -32,7 +32,7 @@ export default function AboutChristen() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-white">
+      <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
@@ -96,7 +96,7 @@ export default function AboutChristen() {
       </section>
 
       {/* Priorities Section */}
-      <section className="py-20 bg-white">
+      <section id="priorities" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -184,6 +184,8 @@ export default function AboutChristen() {
           </div>
         </div>
       </section>
+
+
 
       {/* Commitment Section */}
       <section className="py-20 bg-navy-blue text-white">
