@@ -50,12 +50,14 @@ export default function AboutChristen() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gray-200 rounded-lg aspect-[4/5] flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <MapPin className="h-16 w-16 mx-auto mb-4" />
-                    <p className="text-lg font-medium">Christen in Riverside</p>
-                    <p className="text-sm">Placeholder for image of Christen in her hometown</p>
-                  </div>
+                <div className="rounded-lg aspect-[4/5] overflow-hidden">
+                  <Image
+                    src="/20190404171037_IMG_8448.jpg"
+                    alt="Christen Montero in Riverside"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
               </div>
             </div>
@@ -69,12 +71,14 @@ export default function AboutChristen() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <div className="relative">
-                <div className="bg-gray-200 rounded-lg aspect-[4/5] flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <Building2 className="h-16 w-16 mx-auto mb-4" />
-                    <p className="text-lg font-medium">Business Leadership</p>
-                    <p className="text-sm">Placeholder for image of Christen at work</p>
-                  </div>
+                <div className="rounded-lg aspect-[4/5] overflow-hidden">
+                  <Image
+                    src="/DSC_0273.JPG"
+                    alt="Christen Montero at work"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <div>
