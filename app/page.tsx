@@ -114,7 +114,7 @@ export default function Home() {
                   <br /><br />
                   My family came here in search of opportunity, and we found it through strong schools, safe neighborhoods, and a supportive community. But today, those community values and opportunities that helped me succeed are slipping away.
                   <br /><br />
-                  I'm running for City Council because I believe it's a time for a New Direction for Riverside to ensure every family, every small business, and every neighborhood has the resources and opportunity to thrive."
+                  I'm running for City Council because I believe it's time for a New Direction for Riverside to ensure every family, every small business, and every neighborhood has the resources and opportunity to thrive."
                 </blockquote>
               </div>
 
