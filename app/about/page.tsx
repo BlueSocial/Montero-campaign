@@ -176,12 +176,14 @@ export default function AboutChristen() {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gray-200 rounded-lg aspect-[4/5] flex items-center justify-center">
-                  <div className="text-center text-gray-500">
-                    <Users className="h-16 w-16 mx-auto mb-4" />
-                    <p className="text-lg font-medium">Personal Life</p>
-                    <p className="text-sm">Placeholder for image of Christen hiking or with her dogs</p>
-                  </div>
+                <div className="rounded-lg aspect-[4/5] overflow-hidden">
+                  <Image
+                    src="/Christen-lifestyle.png"
+                    alt="Christen Montero hiking or with her dogs"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
               </div>
             </div>
