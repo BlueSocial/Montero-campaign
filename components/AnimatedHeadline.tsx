@@ -25,16 +25,29 @@ export default function AnimatedHeadline() {
   }, []);
 
   return (
-    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg font-serif whitespace-nowrap">
-      A New{' '}
-      <span
-        className={`inline-block transition-opacity duration-500 min-w-[120px] md:min-w-[180px] text-center ${
-          isAnimating ? 'opacity-0' : 'opacity-100'
-        } ${words[currentIndex].color}`}
-      >
-        {words[currentIndex].text}
-      </span>{' '}
-      for Riverside
+    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg font-serif">
+      <div className="md:hidden">
+        <div className="block">A New</div>
+        <span
+          className={`inline-block transition-opacity duration-500 min-w-[120px] text-center ${
+            isAnimating ? 'opacity-0' : 'opacity-100'
+          } ${words[currentIndex].color}`}
+        >
+          {words[currentIndex].text}
+        </span>
+        <div className="block">for Riverside</div>
+      </div>
+      <div className="hidden md:block whitespace-nowrap">
+        A New{' '}
+        <span
+          className={`inline-block transition-opacity duration-500 min-w-[180px] text-center ${
+            isAnimating ? 'opacity-0' : 'opacity-100'
+          } ${words[currentIndex].color}`}
+        >
+          {words[currentIndex].text}
+        </span>{' '}
+        for Riverside
+      </div>
     </h1>
   );
 } 

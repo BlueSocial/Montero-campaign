@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -26,37 +26,37 @@ export default function Home() {
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-navy-blue/50" /> {/* Adjusted overlay for better readability */}
+          <div className="absolute inset-0 bg-navy-blue/60" /> {/* Increased overlay for better mobile readability */}
         </div>
 
         <WaveBackground />
 
-        {/* Hero Image - positioned behind wave but in front of background */}
-        <div className="absolute inset-0 z-5 flex items-center justify-end pr-8 md:pr-16 lg:pr-24">
-          <div className="relative h-full w-full md:w-1/2 lg:w-2/5 flex items-center justify-center">
+        {/* Hero Image - optimized for mobile and desktop */}
+        <div className="absolute inset-0 z-5 flex items-end justify-center md:justify-end md:pr-8 lg:pr-16 xl:pr-24">
+          <div className="relative h-full w-full max-w-md md:max-w-none md:w-1/2 lg:w-2/5 flex items-end justify-center px-4 md:px-0 pb-8 md:pb-0">
             <Image
               src="/Christen - Hero.png"
               alt="Christen Montero"
               fill
-              className="object-contain object-center"
+              className="object-contain object-bottom"
               priority
             />
           </div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-screen py-20">
+          <div className="w-full max-w-2xl text-center mb-8 md:mb-0 md:mr-auto md:ml-0 md:text-left">
             <AnimatedHeadline />
-            <p className="text-xl md:text-2xl mb-8 text-white drop-shadow-md">
+            <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-white drop-shadow-lg leading-relaxed px-2 md:px-0">
               It's time for leadership that reflects the strength, diversity, and determination of our community. By coming together, we can ensure every family, small business, and neighborhood has the resources and opportunity to thrive.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="bg-sky-blue hover:bg-sky-blue/90 text-white px-8 py-6 text-lg shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
+              <Button asChild className="bg-sky-blue hover:bg-sky-blue/90 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg w-full sm:w-auto">
                 <a href="#get-involved">
                   Endorse Christen
                 </a>
               </Button>
-              <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8 py-6 text-lg shadow-lg">
+              <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg w-full sm:w-auto">
                 <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
                   Donate Now
                 </a>
