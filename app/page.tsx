@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white text-center animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-white text-center animate-bounce w-full max-w-xs mx-auto">
           <p className="text-sm mb-2">Scroll Down</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
