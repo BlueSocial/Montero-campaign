@@ -243,13 +243,16 @@ export default function GetInvolved() {
           </form>
           
           <div className="mt-6 pt-4 border-t border-gray-200">
-            <p className="text-xs text-gray-600 text-center">
-              By providing your email and mobile number, you agree to the{' '}
-              <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
-                privacy policy
-              </a>{' '}
-              and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
-            </p>
+            <div className="flex items-start space-x-2 mb-3">
+              <Checkbox id="volOptIn" name="optIn" required />
+              <label htmlFor="volOptIn" className="text-xs text-gray-600 leading-relaxed">
+                I agree to the{' '}
+                <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
+                  privacy policy
+                </a>{' '}
+                and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+              </label>
+            </div>
           </div>
         </TabsContent>
 
@@ -307,13 +310,16 @@ export default function GetInvolved() {
           </form>
           
           <div className="mt-6 pt-4 border-t border-gray-200">
-            <p className="text-xs text-gray-600 text-center">
-              By providing your email and mobile number, you agree to the{' '}
-              <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
-                privacy policy
-              </a>{' '}
-              and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
-            </p>
+            <div className="flex items-start space-x-2 mb-3">
+              <Checkbox id="hostOptIn" name="optIn" required />
+              <label htmlFor="hostOptIn" className="text-xs text-gray-600 leading-relaxed">
+                I agree to the{' '}
+                <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
+                  privacy policy
+                </a>{' '}
+                and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+              </label>
+            </div>
           </div>
         </TabsContent>
       </Tabs>

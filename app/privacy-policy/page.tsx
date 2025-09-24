@@ -29,6 +29,9 @@ export default function PrivacyPolicy() {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   You consent to our communicating with you about Christen Montero for Riverside City Council 2026 via SMS, text message, email or other electronic means. Your carrier's normal messaging, data and other rates and fees will apply to these communications.
                 </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  When you provide us with your mobile phone number to opt in to receive messages, we will use it solely for the purpose of communicating with you. We do not share, sell, rent, or disclose your mobile opt-in data, consent, or personal information to any third parties for marketing or promotional purposes. Your mobile information will only be used to send you campaign updates, alerts, and other related communications that you have agreed to receive.
+                </p>
                 <p className="text-gray-700 leading-relaxed">
                   If you subscribe to any text programs that Christen Montero for Riverside City Council 2026 makes available, the following terms apply:
                 </p>
