@@ -4,6 +4,7 @@ import { CheckCircle, Users, HomeIcon, Shield, Leaf, ChevronRight, Building2, Ma
 import Header from "@/components/header"
 import WaveBackground from "@/components/wave-background"
 import PriorityCard from "@/components/priority-card"
+import NewsletterPopup from "@/components/newsletter-popup"
 
 import DonationForm from "@/components/donation-form"
 import GetInvolved from "@/components/get-involved"
@@ -303,6 +304,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Newsletter Popup */}
+      <NewsletterPopup />
     </main>
   )
 }
