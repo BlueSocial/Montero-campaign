@@ -6,21 +6,52 @@ import { X } from "lucide-react"
 
 export default function NewsletterPopup() {
   const [isVisible, setIsVisible] = useState(false)
-  const [hasShown, setHasShown] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-      
-      if (scrollPercentage >= 30 && !hasShown) {
-        setIsVisible(true)
-        setHasShown(true)
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (target.id === 'newsletter-modal' || target.closest('#newsletter-modal')) {
+        setIsVisible(false)
       }
     }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [hasShown])
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsVisible(false)
+      }
+    }
+
+    if (isVisible) {
+      document.addEventListener('click', handleClickOutside)
+      document.addEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isVisible])
+
+  useEffect(() => {
+    const handleButtonClick = () => {
+      setIsVisible(true)
+    }
+
+    const button = document.querySelector('[data-newsletter-button]')
+    if (button) {
+      button.addEventListener('click', handleButtonClick)
+    }
+
+    return () => {
+      if (button) {
+        button.removeEventListener('click', handleButtonClick)
+      }
+    }
+  }, [])
 
   const closePopup = () => {
     setIsVisible(false)
@@ -29,7 +60,7 @@ export default function NewsletterPopup() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+    <div id="newsletter-modal" className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-navy-blue to-sky-blue text-white p-6 relative">

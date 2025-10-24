@@ -198,6 +198,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      <section className="relative py-20 text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/riverside.jpeg"
+            alt="Riverside street scene at night"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-navy-blue/70" /> {/* Dark overlay for text readability */}
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif drop-shadow-lg">Stay Connected</h2>
+            <p className="text-xl mb-8 leading-relaxed drop-shadow-md">
+              Let's build a better Riverside, together! Your voice matters, and we want to make sure you're heard. 
+              Join our newsletter to receive updates that are directly relevant to the issues you care about.
+            </p>
+            <Button 
+              data-newsletter-button
+              className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8 py-6 text-lg shadow-xl"
+            >
+              Join Our Newsletter
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
