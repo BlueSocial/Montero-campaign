@@ -198,6 +198,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Endorsement Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue font-serif">
+              Endorsements
+            </h2>
+            <div className="bg-gradient-to-br from-navy-blue/5 to-sky-blue/10 rounded-lg p-8 md:p-12 shadow-lg">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                {/* Photo */}
+                <div className="flex-shrink-0">
+                  <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-golden-yellow shadow-xl">
+                    <Image
+                      src="/Jose-Medina.png"
+                      alt="Jose Medina"
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
+                </div>
+                
+                {/* Testimonial */}
+                <div className="flex-1 text-center md:text-left">
+                  <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
+                    "I am proud to endorse Christen Montero for Riverside City Council. Christen will be an important ally in the fight to keep Riverside affordable for working families struggling with rising costs. Her fresh business perspective and commitment to practical, community focused solutions are exactly what we need on the City Council. Christen understands that keeping Riverside vibrant means supporting small businesses, expanding housing options families can afford, and protecting the sense of opportunity that has always defined our city."
+                  </blockquote>
+                  
+                  {/* Attribution */}
+                  <div className="border-t-2 border-golden-yellow pt-4">
+                    <p className="text-xl md:text-2xl font-bold text-navy-blue">
+                      JOSE MEDINA
+                    </p>
+                    <p className="text-base md:text-lg text-gray-600 mt-1">
+                      Riverside County Supervisor
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="relative py-20 text-white overflow-hidden">
         {/* Background Image */}
@@ -321,6 +364,11 @@ export default function Home() {
                 <li>
                   <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer" className="hover:text-golden-yellow transition-colors">
                     Donate
+                  </a>
+                </li>
+                <li>
+                  <a href="/Project Fact Sheet & FAQ Strategy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-golden-yellow transition-colors">
+                    Fact Sheet
                   </a>
                 </li>
               </ul>

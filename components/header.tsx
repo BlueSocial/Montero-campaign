@@ -57,6 +57,14 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
             <Link href="/#get-involved" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Get Involved
             </Link>
+            <Link 
+              href="https://docs.google.com/forms/d/e/1FAIpQLScwjzH8KID9Z4qo3kS0QOMbue5qvtsaa5t_JVJibUI5LaG3PQ/viewform" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}
+            >
+              Share Your Thoughts
+            </Link>
             <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue">
               <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
                 Donate
@@ -88,6 +96,15 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
               </Link>
               <Link href="/#get-involved" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Get Involved
+              </Link>
+              <Link 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScwjzH8KID9Z4qo3kS0QOMbue5qvtsaa5t_JVJibUI5LaG3PQ/viewform" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-navy-blue block py-2" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Share Your Thoughts
               </Link>
               <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue w-full">
                 <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">

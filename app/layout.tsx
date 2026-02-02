@@ -21,7 +21,11 @@ const merriweather = Merriweather({
 export const metadata: Metadata = {
   title: "Christen Montero for Riverside City Council Ward 2",
   description: "Official campaign website for Christen Montero, candidate for Riverside City Council Ward 2 in 2026.",
-  generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/montero-favicon-dark.png',
+    apple: '/montero-favicon-dark.png',
+  },
 }
 
 export default function RootLayout({
