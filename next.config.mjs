@@ -1,3 +1,8 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
 let userConfig = undefined
 try {
   // try to import ESM first
@@ -13,6 +18,9 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Parent /Users/admin/package-lock.json made Next treat the home folder as
+  // the workspace root, which 404'd /_next/static/css and unstyled the site.
+  outputFileTracingRoot: __dirname,
   eslint: {
     ignoreDuringBuilds: true,
   },

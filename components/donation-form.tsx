@@ -1,47 +1,42 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { campaign } from "@/lib/campaign"
+
+const suggestedAmounts = ["50", "100", "250", "500"] as const
 
 export default function DonationForm() {
-  const efundraiserUrl = "https://www.efundraisingconnections.com/c/ChristenMontero2026"
-  
-  const donationAmounts = [
-    { amount: "50", url: efundraiserUrl },
-    { amount: "100", url: efundraiserUrl },
-    { amount: "250", url: efundraiserUrl },
-    { amount: "500", url: efundraiserUrl },
-  ]
-
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="flex flex-wrap justify-center gap-4">
-        {donationAmounts.map(({ amount, url }) => (
+    <div className="mx-auto max-w-2xl">
+      <p className="mb-6 text-center text-sm text-white/80">
+        Suggested contribution levels — you'll select your final amount securely on our contribution page.
+      </p>
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+        {suggestedAmounts.map((amount) => (
           <Button
             key={amount}
             asChild
-            className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue text-lg font-semibold px-8 py-4 h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="h-12 rounded-lg bg-golden-yellow px-6 text-base font-semibold text-navy-blue shadow-md hover:bg-golden-yellow/90 md:px-8 md:text-lg"
           >
-            <a href={url} target="_blank" rel="noopener noreferrer">
+            <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
               ${amount}
             </a>
           </Button>
         ))}
-        
+
         <Button
           asChild
-          className="bg-navy-blue hover:bg-navy-blue/90 text-white border-2 border-golden-yellow text-lg font-semibold px-8 py-4 h-auto rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          className="h-12 rounded-lg border-2 border-golden-yellow bg-navy-blue px-6 text-base font-semibold text-white hover:bg-navy-blue/90 md:px-8 md:text-lg"
         >
-          <a href={efundraiserUrl} target="_blank" rel="noopener noreferrer">
+          <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
             Other
           </a>
         </Button>
       </div>
-      
-      <div className="text-center mt-6">
-        <p className="text-white/80 text-sm">
-          Click any amount above to donate securely through our EFundraiser platform
-        </p>
-      </div>
+
+      <p className="mt-6 text-center text-sm text-white/80">
+        Every contribution helps us reach more voters across Division 2.
+      </p>
     </div>
   )
 }

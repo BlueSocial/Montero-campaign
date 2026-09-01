@@ -1,15 +1,16 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Users, HomeIcon, Shield, Leaf, ChevronRight, Building2, MapPin, Heart, TreePine, Palette } from "lucide-react"
 import Header from "@/components/header"
 import WaveBackground from "@/components/wave-background"
-import PriorityCard from "@/components/priority-card"
 import NewsletterPopup from "@/components/newsletter-popup"
+import WhyWaterBoard from "@/components/why-water-board"
+import CampaignPriorities from "@/components/campaign-priorities"
 
 import DonationForm from "@/components/donation-form"
 import GetInvolved from "@/components/get-involved"
-import AnimatedHeadline from "@/components/AnimatedHeadline"
+import Endorsements from "@/components/endorsements"
 import Link from "next/link"
+import { campaign } from "@/lib/campaign"
 
 export default function Home() {
   return (
@@ -17,58 +18,72 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="hero" className="relative overflow-hidden md:min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/Riverside_Hero.jpg"
             alt="Riverside city landscape"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center md:object-[center_30%]"
             priority
           />
-          <div className="absolute inset-0 bg-navy-blue/60" /> {/* Increased overlay for better mobile readability */}
+          <div className="absolute inset-0 bg-navy-blue/70 md:bg-navy-blue/60" />
         </div>
 
         <WaveBackground />
 
-        {/* Hero Image - optimized for mobile and desktop */}
-        <div className="absolute inset-0 z-5 flex items-end justify-center md:justify-end md:pr-8 lg:pr-16 xl:pr-24">
-          <div className="relative h-full w-full max-w-md md:max-w-none md:w-1/2 lg:w-2/5 flex items-end justify-center px-4 md:px-0 pb-8 md:pb-0">
-            <Image
-              src="/Christen - Hero.png"
-              alt="Christen Montero"
-              fill
-              className="object-contain object-bottom"
-              priority
-            />
+        <div className="relative z-10 flex flex-col md:min-h-screen">
+          {/* Copy sits above the portrait on mobile so it never crosses Christen's face */}
+          <div className="container mx-auto px-4 pt-[4.5rem] pb-3 md:absolute md:inset-0 md:z-10 md:flex md:items-center md:pt-0 md:pb-0">
+            <div className="w-full max-w-xl text-left md:max-w-[46%] lg:max-w-[42%] xl:max-w-2xl">
+              <p className="mb-2 text-[10px] font-semibold uppercase leading-relaxed tracking-[0.16em] text-golden-yellow drop-shadow-md md:mb-4 md:text-xs md:tracking-[0.18em]">
+                <span className="block">Christen Montero for</span>
+                <span className="block">Western Municipal Water District — Division 2</span>
+              </p>
+              <h1 className="mb-3 font-serif font-bold leading-[1.05] drop-shadow-lg md:mb-6">
+                <span className="block text-[2rem] text-white sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
+                  Affordable Water.
+                </span>
+                <span className="block text-[2rem] text-golden-yellow sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
+                  Reliable Future.
+                </span>
+              </h1>
+              <p className="mb-5 max-w-xl text-[15px] leading-relaxed text-white drop-shadow-lg sm:text-lg md:mb-8 md:text-xl">
+                Water affects every household, every business, and every neighborhood. Christen Montero is running to protect ratepayers, strengthen our local water supply, and bring transparency and accountability to Western Municipal Water District.
+              </p>
+              <div className="flex max-w-md flex-col gap-2.5 sm:max-w-none sm:flex-row sm:gap-4">
+                <Button asChild className="h-11 w-full bg-sky-blue px-6 text-base text-white shadow-lg hover:bg-sky-blue/90 sm:w-auto md:h-12 md:px-8">
+                  <a href="#about">
+                    Meet Christen
+                  </a>
+                </Button>
+                <Button asChild className="h-11 w-full bg-golden-yellow px-6 text-base text-navy-blue shadow-lg hover:bg-golden-yellow/90 sm:w-auto md:h-12 md:px-8">
+                  <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
+                    Support Our Campaign
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-screen py-20">
-          <div className="w-full max-w-2xl text-center mb-8 md:mb-0 md:mr-auto md:ml-0 md:text-left">
-            <AnimatedHeadline />
-            <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-white drop-shadow-lg leading-relaxed px-2 md:px-0">
-              It's time for leadership that reflects the strength, diversity, and determination of our community. By coming together, we can ensure every family, small business, and neighborhood has the resources and opportunity to thrive.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              <Button asChild className="bg-sky-blue hover:bg-sky-blue/90 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg w-full sm:w-auto">
-                <a href="#get-involved">
-                  Endorse Christen
-                </a>
-              </Button>
-              <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-lg w-full sm:w-auto">
-                <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
-                  Donate Now
-                </a>
-              </Button>
+          {/* Portrait: below copy on mobile, right-aligned overlay on desktop */}
+          <div className="pointer-events-none relative h-[280px] sm:h-[320px] md:absolute md:inset-0 md:z-[5] md:h-auto md:min-h-0 md:max-h-none md:flex md:items-end md:justify-end md:pr-8 lg:pr-16 xl:pr-24">
+            <div className="relative mx-auto h-full w-full max-w-xs sm:max-w-sm md:mx-0 md:max-w-none md:w-1/2 lg:w-2/5">
+              <Image
+                src="/Christen - Hero.png"
+                alt="Christen Montero"
+                fill
+                className="object-contain object-bottom"
+                priority
+              />
             </div>
           </div>
         </div>
 
-        {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-0 right-0 z-10 text-white text-center animate-bounce">
-          <p className="text-sm mb-2">Scroll Down</p>
+        {/* Scroll Down Indicator — desktop only */}
+        <div className="absolute bottom-8 left-8 z-20 hidden text-white md:block">
+          <p className="mb-2 text-sm">Scroll Down</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -79,50 +94,67 @@ export default function Home() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="mx-auto"
+            aria-hidden="true"
           >
             <path d="M12 5v14" />
             <path d="m19 12-7 7-7-7" />
           </svg>
         </div>
+
+        <svg
+          className="pointer-events-none absolute bottom-0 left-0 z-20 h-4 w-full text-white md:h-12"
+          viewBox="0 0 1440 48"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path fill="currentColor" d="M0 48C360 8 1080 8 1440 48H0Z" />
+        </svg>
       </section>
 
+      <WhyWaterBoard />
+
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="scroll-mt-24 bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue">Meet Christen</h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <h2 className="mb-16 text-center text-3xl font-bold text-navy-blue md:text-4xl">Meet Christen</h2>
+          <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
               <Image
                 src="/Christen-podium.png"
                 alt="Christen Montero speaking at a podium"
                 width={500}
                 height={500}
-                className="rounded-lg shadow-lg object-cover w-full h-auto"
+                className="h-auto w-full rounded-lg object-cover shadow-lg"
               />
             </div>
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-navy-blue">Riverside Roots & Leadership</h3>
+              <h3 className="mb-4 text-2xl font-semibold text-navy-blue">Riverside Roots. Practical Leadership.</h3>
               <p className="mb-6 text-gray-700">
-                Christen Montero is a dedicated community leader with deep roots in Riverside. With over 15 years of
-                experience in business, community development and advocacy, Christen has consistently demonstrated a
-                commitment to improving the lives of Ward 2 residents.
+                Christen Montero is a lifelong Riverside resident, Riverside Planning Commissioner, local agricultural operator, and small business leader. Her experience across public service, business, and agriculture gives her a practical understanding of how decisions about water affect families, local businesses, growth, and our region's future.
               </p>
 
-              <div className="bg-white border-l-4 border-sky-blue p-6 rounded-r-lg shadow-sm">
-                <blockquote className="text-gray-700 italic text-lg leading-relaxed">
-                  "Riverside is more than my hometown — it's where I was raised, where I built my business, and where I've spent my life investing in others.
-                  <br /><br />
-                  My family came here in search of opportunity, and we found it through strong schools, safe neighborhoods, and a supportive community. But today, those community values and opportunities that helped me succeed are slipping away.
-                  <br /><br />
-                  I'm running for City Council because I believe it's time for a New Direction for Riverside to ensure every family, every small business, and every neighborhood has the resources and opportunity to thrive."
+              <div className="rounded-r-lg border-l-4 border-sky-blue bg-white p-6 shadow-sm">
+                <blockquote className="text-lg italic leading-relaxed text-gray-700">
+                  "Water isn't an abstract issue. It's a kitchen-table issue. It affects what families pay each month, whether businesses can grow, and whether our community is prepared for the future."
                 </blockquote>
               </div>
 
+              <p className="mt-6 text-gray-700">
+                Through her work in local agriculture and regional food recovery, Christen has seen firsthand how responsible resource management can lower costs, reduce waste, and strengthen local communities. She is running to bring that same practical approach to Western Municipal Water District.
+              </p>
+
+              <aside className="mt-8 border-l-4 border-golden-yellow bg-white px-5 py-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-navy-blue">
+                  From the farm to the water board
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                  Through local agriculture and food recovery, Christen has worked directly with the challenges of resource efficiency, operating costs, and sustainability.
+                </p>
+              </aside>
+
               <Link href="/about">
-                <Button className="mt-8 bg-navy-blue hover:bg-navy-blue/90 text-white">
-                  Learn More About Christen
-                  <ChevronRight className="ml-2 h-4 w-4" />
+                <Button className="mt-8 bg-navy-blue text-white hover:bg-navy-blue/90">
+                  Meet Christen
                 </Button>
               </Link>
             </div>
@@ -130,142 +162,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Priorities Section */}
-      <section id="priorities" className="py-20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue">Core Priorities</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            <PriorityCard
-              icon={<Building2 className="h-10 w-10" />}
-              title="Supporting Small Businesses"
-              description="Give small businesses the support they need to create safe, good-paying jobs closer to where people live."
-              color="bg-sky-blue"
-              delay={0}
-            />
-
-            <PriorityCard
-              icon={<MapPin className="h-10 w-10" />}
-              title="Affordable and Livable Neighborhoods"
-              description="Making neighborhoods more affordable, dynamic and livable by investing in core services and amenities that residents can easily walk or drive to."
-              color="bg-golden-yellow"
-              delay={200}
-            />
-
-            <PriorityCard
-              icon={<Heart className="h-10 w-10" />}
-              title="Public Safety"
-              description="Ensuring first responders have the resources they need to keep our community safe."
-              color="bg-sky-blue"
-              delay={400}
-            />
-
-            <PriorityCard
-              icon={<TreePine className="h-10 w-10" />}
-              title="Environment and Sustainability"
-              description="Fostering a healthier environment by expanding green spaces in neighborhoods for everyone to enjoy."
-              color="bg-golden-yellow"
-              delay={600}
-            />
-
-            <PriorityCard
-              icon={<Palette className="h-10 w-10" />}
-              title="Thriving Arts and Culture"
-              description="Building Riverside into a thriving cultural center by leveraging community assets like The Cheech to attract more restaurants, art galleries, cultural events, and festivals."
-              color="bg-sky-blue"
-              delay={800}
-            />
-          </div>
-        </div>
-      </section>
+      <CampaignPriorities />
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="py-20 bg-gray-50">
+      <section id="get-involved" className="scroll-mt-24 bg-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <GetInvolved />
         </div>
       </section>
 
       {/* Donate Section */}
-      <section id="donate" className="py-20 bg-navy-blue text-white">
+      <section id="donate" className="scroll-mt-24 bg-navy-blue py-16 text-white md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Support Our Campaign</h2>
-          <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-            Your contribution helps us reach more voters and share our vision for a better Riverside. Every donation, no
-            matter the size, makes a difference.
+          <h2 className="mb-6 text-center text-3xl font-bold md:text-4xl">Help Christen Reach Division 2</h2>
+          <p className="mx-auto mb-10 max-w-2xl text-center text-lg leading-relaxed text-white/90 md:mb-12">
+            Your contribution helps us communicate directly with voters, share Christen&apos;s plan for affordable and reliable water, and build the grassroots campaign it takes to win.
           </p>
 
           <DonationForm />
         </div>
       </section>
 
-      {/* Endorsement Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-navy-blue font-serif">
-              Endorsements
-            </h2>
-            <div className="bg-gradient-to-br from-navy-blue/5 to-sky-blue/10 rounded-lg p-8 md:p-12 shadow-lg">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                {/* Photo */}
-                <div className="flex-shrink-0">
-                  <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-golden-yellow shadow-xl">
-                    <Image
-                      src="/Jose-Medina.png"
-                      alt="Jose Medina"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-                </div>
-                
-                {/* Testimonial */}
-                <div className="flex-1 text-center md:text-left">
-                  <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 italic">
-                    "I am proud to endorse Christen Montero for Riverside City Council. Christen will be an important ally in the fight to keep Riverside affordable for working families struggling with rising costs. Her fresh business perspective and commitment to practical, community focused solutions are exactly what we need on the City Council. Christen understands that keeping Riverside vibrant means supporting small businesses, expanding housing options families can afford, and protecting the sense of opportunity that has always defined our city."
-                  </blockquote>
-                  
-                  {/* Attribution */}
-                  <div className="border-t-2 border-golden-yellow pt-4">
-                    <p className="text-xl md:text-2xl font-bold text-navy-blue">
-                      JOSE MEDINA
-                    </p>
-                    <p className="text-base md:text-lg text-gray-600 mt-1">
-                      Riverside County Supervisor
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Endorsements />
 
       {/* Newsletter Section */}
-      <section className="relative py-20 text-white overflow-hidden">
-        {/* Background Image */}
+      <section className="relative overflow-hidden py-16 text-white md:py-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="/riverside.jpeg"
             alt="Riverside street scene at night"
             fill
             className="object-cover object-center"
-            priority
           />
-          <div className="absolute inset-0 bg-navy-blue/70" /> {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-navy-blue/70" />
         </div>
-        
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-serif drop-shadow-lg">Stay Connected</h2>
-            <p className="text-xl mb-8 leading-relaxed drop-shadow-md">
-              Let's build a better Riverside, together! Your voice matters, and we want to make sure you're heard. 
-              Join our newsletter to receive updates that are directly relevant to the issues you care about.
+
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-golden-yellow">
+              Stay informed
             </p>
-            <Button 
+            <h2 className="mb-6 font-serif text-3xl font-bold drop-shadow-lg md:text-4xl">Stay Connected</h2>
+            <p className="mb-8 text-lg leading-relaxed drop-shadow-md md:text-xl">
+              Get campaign updates, upcoming events, and the latest news from Team Christen as we work to bring affordable, reliable, and accountable water leadership to Division 2.
+            </p>
+            <Button
               data-newsletter-button
-              className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8 py-6 text-lg shadow-xl"
+              className="bg-golden-yellow px-8 py-6 text-lg text-navy-blue shadow-xl hover:bg-golden-yellow/90"
             >
               Join Our Newsletter
             </Button>
@@ -274,110 +217,71 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 py-12 text-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Christen Montero</h3>
-              <p className="mb-4">Candidate for Riverside City Council Ward 2</p>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-golden-yellow transition-colors">
-                  <span className="sr-only">Facebook</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-facebook"
-                  >
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-                <a href="#" className="hover:text-golden-yellow transition-colors">
-                  <span className="sr-only">Twitter</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-twitter"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
-                </a>
-                <a href="#" className="hover:text-golden-yellow transition-colors">
-                  <span className="sr-only">Instagram</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="lucide lucide-instagram"
-                  >
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                </a>
-              </div>
+              <h3 className="mb-4 text-xl font-bold">{campaign.candidateName}</h3>
+              <p>Candidate for Western Municipal Water District, {campaign.division}</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">Contact</h3>
-              <p className="mb-2">Email: Hello@votechristen.com</p>
+              <h3 className="mb-4 text-xl font-bold">Contact</h3>
+              <p className="mb-2">
+                Email:{" "}
+                <a href={`mailto:${campaign.email}`} className="hover:text-golden-yellow">
+                  {campaign.email}
+                </a>
+              </p>
               <p>Phone: 951-406-4664</p>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+              <h3 className="mb-4 text-xl font-bold">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#about" className="hover:text-golden-yellow transition-colors">
-                    About
-                  </a>
+                  <Link href="/about" className="hover:text-golden-yellow">
+                    Meet Christen
+                  </Link>
                 </li>
                 <li>
-                  <a href="#priorities" className="hover:text-golden-yellow transition-colors">
+                  <a href="#priorities" className="hover:text-golden-yellow">
                     Priorities
                   </a>
                 </li>
                 <li>
-                  <a href="#get-involved" className="hover:text-golden-yellow transition-colors">
+                  <a href="#why-water-matters" className="hover:text-golden-yellow">
+                    Why Water Matters
+                  </a>
+                </li>
+                <li>
+                  <a href="#get-involved" className="hover:text-golden-yellow">
                     Get Involved
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer" className="hover:text-golden-yellow transition-colors">
+                  <a
+                    href={campaign.donationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-golden-yellow"
+                  >
                     Donate
                   </a>
                 </li>
                 <li>
-                  <a href="/Project Fact Sheet & FAQ Strategy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-golden-yellow transition-colors">
-                    Fact Sheet
-                  </a>
+                  <Link href="/privacy-policy" className="hover:text-golden-yellow">
+                    Privacy Policy
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <div className="inline-block border border-gray-300 bg-white text-gray-800 px-6 py-4 rounded-md shadow-sm">
-              <p className="text-sm">
+          <div className="mt-8 border-t border-gray-700 pt-8 text-center">
+            <div className="mx-auto inline-block max-w-full rounded-md border border-gray-300 bg-white px-4 py-4 text-gray-800 shadow-sm sm:px-6">
+              {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE NAME / FPPC ID / LEGAL DISCLAIMER */}
+              <p className="text-sm leading-relaxed">
                 Paid for by Christen Montero for Riverside City Council Ward 2 2026 ID# 1481381 c/o 728 W. Edna Place, Covina, CA 91722
               </p>
             </div>

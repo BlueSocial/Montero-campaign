@@ -68,7 +68,7 @@ export default function NewsletterPopup() {
             Stay Connected with Christen
           </h2>
           <p className="text-center mt-2 opacity-90">
-            Join our newsletter and help build a better Riverside together
+            Get campaign updates and the latest news from Team Christen
           </p>
           <Button
             onClick={closePopup}

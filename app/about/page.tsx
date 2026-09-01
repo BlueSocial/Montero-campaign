@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, MapPin, GraduationCap, Building2, Heart, Users, Leaf, Palette, TreePine } from "lucide-react"
 import Link from "next/link"
+import { campaign } from "@/lib/campaign"
 
 export default function AboutChristen() {
   return (
@@ -22,7 +23,7 @@ export default function AboutChristen() {
             </p>
             <div className="flex justify-center">
               <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8">
-                <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
+                <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
                   Support Christen's Campaign
                 </a>
               </Button>
@@ -45,7 +46,7 @@ export default function AboutChristen() {
                     Christen Montero is a businesswoman, entrepreneur, and STEM advocate with deep roots in Riverside. Her parents moved the family to Riverside in search of opportunity and they found a city that offered strong schools, good-paying jobs, safe neighborhoods, and a deep sense of community. Christen attended Taft Elementary School, Amelia Earhart Middle School, Martin Luther King Jr. High School, and Citrus High School, where supportive teachers and mentors nurtured her passion for the performing arts and introduced her to Riverside's dynamic culture of arts and innovation.
                   </p>
                   <p>
-                    Today, our political environment no longer reflects the values that matter most to Riverside families, and the opportunities that once defined the city are growing harder to find. That's why Christen Montero is running for City Council — to offer a New Direction for Riverside that ensures every family, small business, and neighborhood has the resources and opportunity to thrive.
+                    Today, our political environment no longer reflects the values that matter most to Riverside families, and the opportunities that once defined the city are growing harder to find. That's why Christen Montero is running for Western Municipal Water District, Division 2 — to offer a New Direction for Riverside that ensures every family, small business, and neighborhood has the resources and opportunity to thrive.
                   </p>
                 </div>
               </div>
@@ -168,7 +169,7 @@ export default function AboutChristen() {
                 </h2>
                 <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                   <p>
-                    As a candidate for City Council, Christen is committed to action, not just ideas. She believes Riverside deserves leadership rooted in the community, guided by experience, and driven by a deep love for the city we call home.
+                    As a candidate for Western Municipal Water District, Division 2, Christen is committed to action, not just ideas. She believes Riverside deserves leadership rooted in the community, guided by experience, and driven by a deep love for the city we call home.
                   </p>
                   <p>
                     When she's not working, Christen can often be found hiking Mt. Rubidoux, running with her two white German Shepherds, or caring for her farm animals. As a dancer since the age of four, she has long believed in the importance of balance and staying grounded in a fast-paced world. Christen holds both a Bachelor of Arts (BA) and a Master of Business Administration (MBA) from the University of Redlands.
@@ -201,11 +202,11 @@ export default function AboutChristen() {
               Committed to Serving You
             </h2>
             <p className="text-xl mb-8 leading-relaxed">
-              As your City Councilmember, I am committed to serving you—not just with ideas, but with action. Riverside deserves leadership rooted in community, guided by experience, and driven by a deep love for the people in this city we all call home.
+              As your representative on the Western Municipal Water District Board, I am committed to serving you—not just with ideas, but with action. Riverside deserves leadership rooted in community, guided by experience, and driven by a deep love for the people in this city we all call home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue px-8">
-                <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
+                <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
                   Support the Campaign
                 </a>
               </Button>
@@ -236,6 +237,7 @@ export default function AboutChristen() {
         <div className="container mx-auto px-4">
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <div className="inline-block border border-gray-300 bg-white text-gray-800 px-6 py-4 rounded-md shadow-sm">
+              {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE NAME / FPPC ID / LEGAL DISCLAIMER */}
               <p className="text-sm">
                 Paid for by Christen Montero for Riverside City Council Ward 2 2026 ID# 1481381 c/o 728 W. Edna Place, Covina, CA 91722
               </p>

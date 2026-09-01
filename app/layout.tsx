@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Inter, Merriweather } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import { campaign } from "@/lib/campaign"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -19,9 +20,8 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
-  title: "Christen Montero for Riverside City Council Ward 2",
-  description: "Official campaign website for Christen Montero, candidate for Riverside City Council Ward 2 in 2026.",
-  generator: 'v0.dev',
+  title: `${campaign.candidateName} for Western Municipal Water District ${campaign.division}`,
+  description: `Official campaign website for ${campaign.candidateName}, candidate for ${campaign.officeFull}, ${campaign.division}.`,
   icons: {
     icon: '/montero-favicon-dark.png',
     apple: '/montero-favicon-dark.png',

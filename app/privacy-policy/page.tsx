@@ -26,16 +26,19 @@ export default function PrivacyPolicy() {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   When you visit our website, we may collect certain personal information from you, including your name, email address, phone number, and other contact information. We may also collect other information about your usage of our website, such as your IP address, browser type, and operating system.
                 </p>
+                {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE / SMS LEGAL LANGUAGE */}
                 <p className="text-gray-700 leading-relaxed mb-4">
                   You consent to our communicating with you about Christen Montero for Riverside City Council 2026 via SMS, text message, email or other electronic means. Your carrier's normal messaging, data and other rates and fees will apply to these communications.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   When you provide us with your mobile phone number to opt in to receive messages, we will use it solely for the purpose of communicating with you. We do not share, sell, rent, or disclose your mobile opt-in data, consent, or personal information to any third parties for marketing or promotional purposes. Your mobile information will only be used to send you campaign updates, alerts, and other related communications that you have agreed to receive.
                 </p>
+                {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE / SMS LEGAL LANGUAGE */}
                 <p className="text-gray-700 leading-relaxed">
                   If you subscribe to any text programs that Christen Montero for Riverside City Council 2026 makes available, the following terms apply:
                 </p>
                 <ul className="list-disc list-inside mt-4 space-y-2">
+                  {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE / SMS LEGAL LANGUAGE */}
                   <li>By subscribing to Christen Montero for Riverside City Council 2026 updates or alerts, you consent to receive periodic updates or alerts by automatic text message. Text STOP to stop. For Help, text HELP or contact us via email. Message and data rates may apply.</li>
                   <li>You acknowledge and agree that you may opt-out of receiving further mobile messages via any opt-out keywords that are universally recognized, including, but not limited to, STOP, UNSUBSCRIBE, or QUIT.</li>
                 </ul>

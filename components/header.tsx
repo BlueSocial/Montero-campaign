@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import Image from "next/image"
+import { campaign } from "@/lib/campaign"
 
 export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,21 +29,45 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        solid ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        solid ? "bg-white shadow-md py-1.5 md:py-2" : "bg-transparent py-2 md:py-4"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className={`font-bold text-xl md:text-2xl ${solid ? "text-navy-blue" : "text-white"} flex items-center gap-2`}>
-            <Image
-              src={solid ? "/logo-color.png" : "/logo-white.png"}
-              alt="Christen Montero Logo"
-              width={340}
-              height={100}
-              className="h-16 md:h-24 w-auto transition-all duration-300"
-              priority
-            />
-            <span className="sr-only">Christen for Riverside 2026</span>
+        <div className="flex justify-between items-center gap-4">
+          <Link
+            href="/"
+            className={`flex shrink-0 items-center ${solid ? "" : "drop-shadow-md"}`}
+          >
+            <span className="sr-only">
+              {campaign.candidateName} for Western Municipal Water District {campaign.division}
+            </span>
+            <span
+              aria-hidden="true"
+              className={`flex flex-col justify-center leading-none font-sans ${
+                solid ? "text-navy-blue" : "text-white"
+              }`}
+            >
+              <span className="text-[13px] font-extrabold uppercase tracking-[0.06em] md:text-2xl lg:text-[1.75rem] xl:text-3xl md:tracking-[0.08em]">
+                Christen
+              </span>
+              <span className="text-[13px] font-extrabold uppercase tracking-[0.06em] md:text-2xl lg:text-[1.75rem] xl:text-3xl md:tracking-[0.08em]">
+                Montero
+              </span>
+              <span
+                className={`mt-0.5 text-[7px] font-semibold uppercase tracking-[0.12em] whitespace-nowrap md:mt-1 md:text-[10px] lg:text-[11px] md:tracking-[0.14em] ${
+                  solid ? "text-sky-blue" : "text-golden-yellow"
+                }`}
+              >
+                Western Municipal Water District
+              </span>
+              <span
+                className={`text-[7px] font-semibold uppercase tracking-[0.12em] md:text-[10px] lg:text-[11px] md:tracking-[0.14em] ${
+                  solid ? "text-sky-blue" : "text-golden-yellow"
+                }`}
+              >
+                {campaign.division}
+              </span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -66,7 +90,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
               Share Your Thoughts
             </Link>
             <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue">
-              <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
+              <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
                 Donate
               </a>
             </Button>
@@ -107,7 +131,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
                 Share Your Thoughts
               </Link>
               <Button asChild className="bg-golden-yellow hover:bg-golden-yellow/90 text-navy-blue w-full">
-                <a href="https://www.efundraisingconnections.com/c/ChristenMontero2026" target="_blank" rel="noopener noreferrer">
+                <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
                   Donate
                 </a>
               </Button>
