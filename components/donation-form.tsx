@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { campaign } from "@/lib/campaign"
+import { campaign, donationUrlWithAmount } from "@/lib/campaign"
 
 const suggestedAmounts = ["50", "100", "250", "500"] as const
 
@@ -18,7 +18,7 @@ export default function DonationForm() {
             asChild
             className="h-12 rounded-lg bg-golden-yellow px-6 text-base font-semibold text-navy-blue shadow-md hover:bg-golden-yellow/90 md:px-8 md:text-lg"
           >
-            <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">
+            <a href={donationUrlWithAmount(amount)} target="_blank" rel="noopener noreferrer">
               ${amount}
             </a>
           </Button>

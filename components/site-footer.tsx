@@ -1,4 +1,5 @@
 import FooterInfrastructureArt from "@/components/footer/footer-infrastructure-art"
+import Image from "next/image"
 import Link from "next/link"
 import { campaign } from "@/lib/campaign"
 
@@ -11,8 +12,19 @@ export default function SiteFooter() {
       <div className="relative mx-auto max-w-6xl px-4 pt-12 pb-0 md:px-6 md:pt-14">
         <div className="grid grid-cols-1 items-start gap-7 md:grid-cols-3 md:gap-8 lg:gap-12">
           <div>
-            <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-sky-blue">Candidate</p>
-            <h3 className="mb-2 font-serif text-lg font-bold leading-tight md:text-xl">{campaign.candidateName}</h3>
+            <Link
+              href="/"
+              aria-label={`${campaign.candidateName} for Western Municipal Water District ${campaign.division}`}
+              className="relative mb-3 block h-14 w-[calc(3.5rem*1997/787)] md:h-16 md:w-[calc(4rem*1997/787)]"
+            >
+              <Image
+                src="/logo-white.png"
+                alt=""
+                fill
+                sizes="180px"
+                className="object-contain object-left"
+              />
+            </Link>
             <p className="max-w-[16rem] text-sm leading-relaxed text-white/70">
               Candidate for Western Municipal Water District, {campaign.division}
             </p>
@@ -82,6 +94,18 @@ export default function SiteFooter() {
           <span className="font-serif text-base leading-snug text-white/88 md:text-lg">
             Reliable water starts below the surface.
           </span>
+        </p>
+
+        <p className="mt-3 pb-1 text-center text-[11px] text-white/45 md:mt-4">
+          Website by{" "}
+          <a
+            href="https://ftwagency.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/55 underline-offset-2 transition-colors hover:text-golden-yellow hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-golden-yellow focus-visible:ring-offset-2 focus-visible:ring-offset-[#060616]"
+          >
+            FTW Agency
+          </a>
         </p>
       </div>
 

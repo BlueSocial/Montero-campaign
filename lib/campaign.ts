@@ -23,3 +23,12 @@ export const campaign = {
     paidForBy: null as UnconfirmedLegalField,
   },
 } as const
+
+/** Append `amount` for processors that honor it. eFundraising Connections currently ignores this param. */
+export function donationUrlWithAmount(amount?: string | number) {
+  const url = new URL(campaign.donationUrl)
+  if (amount != null && String(amount).trim() !== "") {
+    url.searchParams.set("amount", String(amount))
+  }
+  return url.toString()
+}
