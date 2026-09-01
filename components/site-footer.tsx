@@ -31,7 +31,7 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/#priorities" className="hover:text-golden-yellow">
+                <Link href="/priorities" className="hover:text-golden-yellow">
                   Priorities
                 </Link>
               </li>

@@ -75,7 +75,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
             <Link href="#about" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Meet Christen
             </Link>
-            <Link href="#priorities" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
+            <Link href="/priorities" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Priorities
             </Link>
             <Link href="/#get-involved" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
@@ -115,7 +115,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
               <Link href="#about" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Meet Christen
               </Link>
-              <Link href="#priorities" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/priorities" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Priorities
               </Link>
               <Link href="/#get-involved" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>

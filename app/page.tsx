@@ -245,9 +245,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#priorities" className="hover:text-golden-yellow">
+                  <Link href="/priorities" className="hover:text-golden-yellow">
                     Priorities
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#why-water-matters" className="hover:text-golden-yellow">

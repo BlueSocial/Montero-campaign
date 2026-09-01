@@ -283,7 +283,7 @@ export default function AboutChristen() {
             </ul>
             <div className="mt-14 text-center">
               <Button asChild className="h-11 bg-navy-blue px-8 text-white hover:bg-navy-blue/90 md:h-12">
-                <Link href="/#priorities">Explore Christen&apos;s Priorities</Link>
+                <Link href="/priorities">Explore Christen&apos;s Priorities</Link>
               </Button>
             </div>
           </div>
