@@ -126,7 +126,7 @@ export function CinematicPlayer({
       video.muted = true
       video.playsInline = true
       video.preload = "auto"
-      video.src = blocks[index].videoSrc
+      video.src = blocks[index].videoScrubSrc
       video.load()
     })
 

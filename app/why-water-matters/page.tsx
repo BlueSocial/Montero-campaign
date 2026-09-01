@@ -2,7 +2,7 @@ import Header from "@/components/header"
 import SiteFooter from "@/components/site-footer"
 import { Button } from "@/components/ui/button"
 import { ImpactStory } from "@/components/why-water-matters/impact-story"
-import { StaticImpactChapters } from "@/components/why-water-matters/static-impact"
+import { InlineImpactChapters } from "@/components/why-water-matters/inline-impact"
 import Link from "next/link"
 import { campaign } from "@/lib/campaign"
 import {
@@ -72,7 +72,7 @@ export default function WhyWaterMattersPage() {
       </section>
 
       <div className="lg:hidden motion-reduce:!block">
-        <StaticImpactChapters />
+        <InlineImpactChapters />
       </div>
       <div className="max-lg:hidden motion-reduce:!hidden">
         <ImpactStory />

@@ -10,7 +10,8 @@ export const impactBlocks = [
     bottomLine: "You deserve to understand your water bill.",
     icon: "dollar" as const,
     accent: "gold" as const,
-    videoSrc: "/video/why-water-matters/01-your-bill.scrub.mp4",
+    videoScrubSrc: "/video/why-water-matters/01-your-bill.scrub.mp4",
+    videoPlaybackSrc: "/video/why-water-matters/01-your-bill.web.mp4",
     posterSrc: "/video/why-water-matters/01-your-bill.webp",
   },
   {
@@ -24,7 +25,8 @@ export const impactBlocks = [
     bottomLine: "Reliable water requires planning before there's a crisis.",
     icon: "droplets" as const,
     accent: "sky" as const,
-    videoSrc: "/video/why-water-matters/02-your-water.scrub.mp4",
+    videoScrubSrc: "/video/why-water-matters/02-your-water.scrub.mp4",
+    videoPlaybackSrc: "/video/why-water-matters/02-your-water.web.mp4",
     posterSrc: "/video/why-water-matters/02-your-water.webp",
   },
   {
@@ -38,7 +40,8 @@ export const impactBlocks = [
     bottomLine: "Responsible infrastructure protects service and ratepayers.",
     icon: "wrench" as const,
     accent: "navy" as const,
-    videoSrc: "/video/why-water-matters/03-your-neighborhood.scrub.mp4",
+    videoScrubSrc: "/video/why-water-matters/03-your-neighborhood.scrub.mp4",
+    videoPlaybackSrc: "/video/why-water-matters/03-your-neighborhood.web.mp4",
     posterSrc: "/video/why-water-matters/03-your-neighborhood.webp",
   },
   {
@@ -52,7 +55,8 @@ export const impactBlocks = [
     bottomLine: "Water planning is future planning.",
     icon: "leaf" as const,
     accent: "goldSky" as const,
-    videoSrc: "/video/why-water-matters/04-your-future.scrub.mp4",
+    videoScrubSrc: "/video/why-water-matters/04-your-future.scrub.mp4",
+    videoPlaybackSrc: "/video/why-water-matters/04-your-future.web.mp4",
     posterSrc: "/video/why-water-matters/04-your-future.webp",
   },
 ] as const
