@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Droplets, ShieldCheck, Wrench } from "lucide-react"
 import { campaign } from "@/lib/campaign"
+import { shareSocialMetadata } from "@/lib/share-metadata"
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: `Meet Christen | ${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`,
   description:
     "Learn about Christen Montero, a lifelong Riverside resident, Planning Commissioner, agricultural operator, and small business leader running for the Western Municipal Water District, Division 2.",
+  ...shareSocialMetadata,
 }
 
 function Portrait({

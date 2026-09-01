@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import HashScroll from "@/components/hash-scroll"
 import { campaign } from "@/lib/campaign"
+import { metadataBaseUrl, shareSocialMetadata } from "@/lib/share-metadata"
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -21,12 +22,14 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
+  metadataBase: metadataBaseUrl,
   title: `${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`,
   description: `Official campaign website for ${campaign.candidateName}, candidate for the ${campaign.officeFull}, ${campaign.division}.`,
   icons: {
     icon: '/montero-favicon-dark.png',
     apple: '/montero-favicon-dark.png',
   },
+  ...shareSocialMetadata,
 }
 
 export default function RootLayout({

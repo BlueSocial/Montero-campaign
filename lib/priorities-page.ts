@@ -177,7 +177,7 @@ export const prioritySections = [
     subsections: [
       {
         title: "High Workforce Standards",
-        body: "Support strong safety, training, and workforce standards on major public infrastructure projects.",
+        body: "Support strong skilled, safety, training, and workforce standards on major public infrastructure projects.",
       },
       {
         title: "Local Career Pathways",

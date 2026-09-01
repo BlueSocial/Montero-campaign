@@ -5,6 +5,7 @@ import { ImpactStory } from "@/components/why-water-matters/impact-story"
 import { InlineImpactChapters } from "@/components/why-water-matters/inline-impact"
 import Link from "next/link"
 import { campaign } from "@/lib/campaign"
+import { shareSocialMetadata } from "@/lib/share-metadata"
 import {
   boardFaq,
   boardFlow,
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   title: "Why Your Water Board Matters | Christen Montero",
   description:
     "Learn how the Western Municipal Water District's decisions affect water rates, reliability, infrastructure, conservation, and the future of Division 2.",
+  ...shareSocialMetadata,
 }
 
 export default function WhyWaterMattersPage() {

@@ -9,6 +9,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { campaign } from "@/lib/campaign"
+import { shareSocialMetadata } from "@/lib/share-metadata"
 import {
   getPriorityTitle,
   guidingPrinciples,
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
   title: "Christen Montero's Priorities | The Western Municipal Water District Division 2",
   description:
     "Explore Christen Montero's priorities for affordable water, reliable local supply, responsible infrastructure, conservation, and local jobs in the Western Municipal Water District Division 2.",
+  ...shareSocialMetadata,
 }
 
 const sectionSurfaces = [
