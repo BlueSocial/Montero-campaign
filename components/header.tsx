@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
@@ -36,38 +37,25 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
         <div className="flex justify-between items-center gap-4">
           <Link
             href="/"
-            className={`flex shrink-0 items-center ${solid ? "" : "drop-shadow-md"}`}
+            aria-label={`${campaign.candidateName} for Western Municipal Water District ${campaign.division}`}
+            className={`relative block h-12 w-[calc(3rem*1997/787)] shrink-0 md:h-16 md:w-[calc(4rem*1997/787)] lg:h-[4.5rem] lg:w-[calc(4.5rem*1997/787)] ${solid ? "" : "drop-shadow-md"}`}
           >
-            <span className="sr-only">
-              {campaign.candidateName} for Western Municipal Water District {campaign.division}
-            </span>
-            <span
-              aria-hidden="true"
-              className={`flex flex-col justify-center leading-none font-sans ${
-                solid ? "text-navy-blue" : "text-white"
-              }`}
-            >
-              <span className="text-[13px] font-extrabold uppercase tracking-[0.06em] md:text-2xl lg:text-[1.75rem] xl:text-3xl md:tracking-[0.08em]">
-                Christen
-              </span>
-              <span className="text-[13px] font-extrabold uppercase tracking-[0.06em] md:text-2xl lg:text-[1.75rem] xl:text-3xl md:tracking-[0.08em]">
-                Montero
-              </span>
-              <span
-                className={`mt-0.5 text-[7px] font-semibold uppercase tracking-[0.12em] whitespace-nowrap md:mt-1 md:text-[10px] lg:text-[11px] md:tracking-[0.14em] ${
-                  solid ? "text-sky-blue" : "text-golden-yellow"
-                }`}
-              >
-                Western Municipal Water District
-              </span>
-              <span
-                className={`text-[7px] font-semibold uppercase tracking-[0.12em] md:text-[10px] lg:text-[11px] md:tracking-[0.14em] ${
-                  solid ? "text-sky-blue" : "text-golden-yellow"
-                }`}
-              >
-                {campaign.division}
-              </span>
-            </span>
+            <Image
+              src="/logo-color.png"
+              alt=""
+              fill
+              sizes="200px"
+              className={`object-contain object-left ${solid ? "" : "hidden"}`}
+              priority
+            />
+            <Image
+              src="/logo-white.png"
+              alt=""
+              fill
+              sizes="200px"
+              className={`object-contain object-left ${solid ? "hidden" : ""}`}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

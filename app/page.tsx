@@ -82,7 +82,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Down Indicator — desktop only */}
-        <div className="absolute bottom-8 left-8 z-20 hidden text-white md:block">
+        <div className="absolute bottom-8 left-1/2 z-20 hidden -translate-x-1/2 text-center text-white md:block">
           <p className="mb-2 text-sm">Scroll Down</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -95,6 +95,7 @@ export default function Home() {
             strokeLinecap="round"
             strokeLinejoin="round"
             aria-hidden="true"
+            className="mx-auto"
           >
             <path d="M12 5v14" />
             <path d="m19 12-7 7-7-7" />
