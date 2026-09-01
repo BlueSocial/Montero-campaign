@@ -19,7 +19,7 @@ export default function SiteFooter() {
                 {campaign.email}
               </a>
             </p>
-            <p>Phone: 951-406-4664</p>
+            <p>Phone: {campaign.phone}</p>
           </div>
 
           <div>
@@ -66,7 +66,7 @@ export default function SiteFooter() {
 
         <div className="mt-8 border-t border-gray-700 pt-8 text-center">
           <div className="mx-auto inline-block max-w-full rounded-md border border-gray-300 bg-white px-4 py-4 text-gray-800 shadow-sm sm:px-6">
-            {/* TODO: CONFIRM WMWD CAMPAIGN COMMITTEE NAME / FPPC ID / LEGAL DISCLAIMER */}
+            {/* TODO: CONFIRM WMWD LEGAL COMMITTEE INFORMATION BEFORE REPLACING LIVE DISCLAIMER — see campaign.legal */}
             <p className="text-sm leading-relaxed">
               Paid for by Christen Montero for Riverside City Council Ward 2 2026 ID# 1481381 c/o 728 W. Edna Place, Covina, CA 91722
             </p>
