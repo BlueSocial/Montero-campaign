@@ -250,9 +250,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#why-water-matters" className="hover:text-golden-yellow">
+                  <Link href="/why-water-matters" className="hover:text-golden-yellow">
                     Why Water Matters
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#get-involved" className="hover:text-golden-yellow">

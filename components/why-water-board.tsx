@@ -1,4 +1,6 @@
+import Link from "next/link"
 import { DollarSign, Droplets, Wrench } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const cards = [
   {
@@ -54,6 +56,12 @@ export default function WhyWaterBoard() {
               <p className="flex-1 leading-relaxed text-gray-700">{description}</p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Button asChild className="h-11 bg-navy-blue px-8 text-white hover:bg-navy-blue/90 md:h-12">
+            <Link href="/why-water-matters">Learn Why This Race Matters</Link>
+          </Button>
         </div>
       </div>
     </section>

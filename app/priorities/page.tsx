@@ -72,7 +72,7 @@ export default function PrioritiesPage() {
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">
-                <Link href="/#why-water-matters">Why Water Matters</Link>
+                <Link href="/why-water-matters">Why Water Matters</Link>
               </Button>
               <Button
                 asChild

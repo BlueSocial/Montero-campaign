@@ -36,7 +36,7 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/#why-water-matters" className="hover:text-golden-yellow">
+                <Link href="/why-water-matters" className="hover:text-golden-yellow">
                   Why Water Matters
                 </Link>
               </li>
