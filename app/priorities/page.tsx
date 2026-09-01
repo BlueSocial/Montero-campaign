@@ -302,7 +302,7 @@ export default function PrioritiesPage() {
         </div>
       </section>
 
-      <section className="bg-navy-blue py-20 text-white md:py-28">
+      <section className="bg-gradient-to-br from-navy-blue to-[#1a4578] pt-20 pb-14 text-white md:pt-28 md:pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-golden-yellow">

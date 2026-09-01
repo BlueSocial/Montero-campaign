@@ -279,7 +279,7 @@ export default function WhyWaterMattersPage() {
         </div>
       </section>
 
-      <section className="border-t-4 border-golden-yellow bg-navy-blue py-16 text-white md:py-24">
+      <section className="border-t-4 border-golden-yellow bg-gradient-to-br from-navy-blue to-[#1a4578] pt-16 pb-12 text-white md:pt-24 md:pb-14">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-5 font-serif text-3xl font-bold leading-tight md:text-4xl">

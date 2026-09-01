@@ -156,3 +156,30 @@ html {
 .animate-pulse-subtle {
   animation: pulse-subtle 3s ease-in-out infinite;
 }
+
+@keyframes footer-pipe-flow {
+  to {
+    stroke-dashoffset: -80;
+  }
+}
+
+@keyframes footer-node-pulse {
+  0%,
+  100% {
+    opacity: 0.32;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .footer-pipe-flow {
+    stroke-dasharray: 10 22;
+    animation: footer-pipe-flow 22s linear infinite;
+  }
+
+  .footer-node-pulse {
+    animation: footer-node-pulse 7s ease-in-out infinite;
+  }
+}
