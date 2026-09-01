@@ -290,7 +290,7 @@ export default function WhyWaterMattersPage() {
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">
-                <Link href="/#get-involved">Join the Campaign</Link>
+                <Link href="/#get-involved" scroll={false}>Join the Campaign</Link>
               </Button>
               <Button asChild className="h-11 bg-golden-yellow px-8 text-base text-navy-blue shadow-lg hover:bg-golden-yellow/90 md:h-12">
                 <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">

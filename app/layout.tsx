@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Inter, Merriweather } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import HashScroll from "@/components/hash-scroll"
 import { campaign } from "@/lib/campaign"
 
 const inter = Inter({ 
@@ -43,6 +44,7 @@ export default function RootLayout({
           disableTransitionOnChange
           forcedTheme="light"
         >
+          <HashScroll />
           {children}
           <Toaster />
         </ThemeProvider>

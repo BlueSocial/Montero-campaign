@@ -173,7 +173,7 @@ export const prioritySections = [
     number: "05",
     eyebrow: "Local economic opportunity",
     opening:
-      "Water infrastructure represents a major public investment. Christen believes those investments should strengthen the communities funding them by creating safe, skilled, family-sustaining career opportunities.",
+      "Christen advocates for strong workplace safety, local career pathways, and industry-certified apprenticeships that build a highly skilled workforce. Through strategic partnerships with local labor and business leaders, Christen is committed to protecting good-paying, family-sustaining jobs and driving economic growth right here in the Inland Empire.",
     subsections: [
       {
         title: "High Workforce Standards",
@@ -189,7 +189,7 @@ export const prioritySections = [
       },
       {
         title: "Responsible Public Investment",
-        body: "Public dollars should deliver both reliable infrastructure and tangible community benefit. Christen supports Project Labor Agreements and skilled workforce standards for major public infrastructure investments.",
+        body: "Public dollars should deliver reliable infrastructure and real community benefit. Christen will work with local labor and business leaders on high safety and training standards, including Project Labor Agreements where they help keep skilled work and good jobs in the Inland Empire.",
       },
     ],
     takeaway: "Invest in our water system while creating opportunity here at home.",

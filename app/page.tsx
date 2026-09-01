@@ -116,7 +116,7 @@ export default function Home() {
       <WhyWaterBoard />
 
       {/* About Section */}
-      <section id="about" className="scroll-mt-24 bg-gray-50 py-16 md:py-24">
+      <section id="about" className="scroll-mt-32 bg-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="mb-16 text-center text-3xl font-bold text-navy-blue md:text-4xl">Meet Christen</h2>
           <div className="grid items-center gap-12 md:grid-cols-2">
@@ -167,7 +167,7 @@ export default function Home() {
       <CampaignPriorities />
 
       {/* Get Involved Section */}
-      <section id="get-involved" className="scroll-mt-24 bg-white py-16 md:py-24">
+      <section id="get-involved" className="scroll-mt-32 bg-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <GetInvolved />
         </div>

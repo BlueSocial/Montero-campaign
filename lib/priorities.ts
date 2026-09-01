@@ -39,7 +39,7 @@ export const campaignPriorities = [
     id: "local-jobs",
     title: "Create Good Local Jobs Through Public Investment",
     description:
-      "Major water infrastructure investments should strengthen the communities paying for them. Christen supports high workforce and safety standards, local career pathways, skilled apprenticeships, and partnerships that create family-sustaining jobs here in the Inland Empire.",
+      "Christen advocates for strong workplace safety, local career pathways, and industry-certified apprenticeships. By partnering with local labor and business leaders, she is committed to protecting good-paying, family-sustaining jobs and driving economic growth here in the Inland Empire.",
     supportingLine: "Invest in water. Invest in local workers.",
     icon: "hard-hat",
     featured: false,

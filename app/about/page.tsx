@@ -98,7 +98,7 @@ export default function AboutChristen() {
                 variant="outline"
                 className="h-11 border-white/50 bg-transparent px-6 text-sm font-medium text-white/90 hover:bg-white/10 hover:text-white md:h-12"
               >
-                <Link href="/#get-involved">Join the Campaign</Link>
+                <Link href="/#get-involved" scroll={false}>Join the Campaign</Link>
               </Button>
             </div>
           </div>
@@ -334,7 +334,7 @@ export default function AboutChristen() {
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">
-                <Link href="/#get-involved">Get Involved</Link>
+                <Link href="/#get-involved" scroll={false}>Get Involved</Link>
               </Button>
               <Button asChild className="h-11 bg-golden-yellow px-8 text-base text-navy-blue shadow-lg hover:bg-golden-yellow/90 md:h-12">
                 <a href={campaign.donationUrl} target="_blank" rel="noopener noreferrer">

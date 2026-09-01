@@ -60,7 +60,7 @@ export default function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/#get-involved" className={linkClass}>
+                <Link href="/#get-involved" scroll={false} className={linkClass}>
                   Get Involved
                 </Link>
               </li>
