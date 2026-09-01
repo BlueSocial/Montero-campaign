@@ -10,6 +10,8 @@ export const impactBlocks = [
     bottomLine: "You deserve to understand your water bill.",
     icon: "dollar" as const,
     accent: "gold" as const,
+    videoSrc: "/video/why-water-matters/01-your-bill.scrub.mp4",
+    posterSrc: "/video/why-water-matters/01-your-bill.webp",
   },
   {
     number: "02",
@@ -22,6 +24,8 @@ export const impactBlocks = [
     bottomLine: "Reliable water requires planning before there's a crisis.",
     icon: "droplets" as const,
     accent: "sky" as const,
+    videoSrc: "/video/why-water-matters/02-your-water.scrub.mp4",
+    posterSrc: "/video/why-water-matters/02-your-water.webp",
   },
   {
     number: "03",
@@ -34,6 +38,8 @@ export const impactBlocks = [
     bottomLine: "Responsible infrastructure protects service and ratepayers.",
     icon: "wrench" as const,
     accent: "navy" as const,
+    videoSrc: "/video/why-water-matters/03-your-neighborhood.scrub.mp4",
+    posterSrc: "/video/why-water-matters/03-your-neighborhood.webp",
   },
   {
     number: "04",
@@ -46,8 +52,21 @@ export const impactBlocks = [
     bottomLine: "Water planning is future planning.",
     icon: "leaf" as const,
     accent: "goldSky" as const,
+    videoSrc: "/video/why-water-matters/04-your-future.scrub.mp4",
+    posterSrc: "/video/why-water-matters/04-your-future.webp",
   },
 ] as const
+
+export type ImpactBlock = (typeof impactBlocks)[number]
+
+/** Dissolve length in seconds from chapter i → i+1 (and the reverse). */
+export const impactCrossfadeSeconds = [0.38, 0.43, 0.58] as const
+
+export function impactCrossfadeDuration(fromIndex: number, toIndex: number) {
+  if (fromIndex < 0 || fromIndex === toIndex) return 0.32
+  if (Math.abs(fromIndex - toIndex) !== 1) return 0.2
+  return impactCrossfadeSeconds[Math.min(fromIndex, toIndex)]
+}
 
 export const boardFlow = {
   source: "Board Decisions",
