@@ -69,12 +69,13 @@ export default function Home() {
           </div>
 
           {/* Portrait: below copy on mobile, right-aligned overlay on desktop */}
-          <div className="pointer-events-none relative h-[280px] sm:h-[320px] md:absolute md:inset-0 md:z-[5] md:h-auto md:min-h-0 md:max-h-none md:flex md:items-end md:justify-end md:pr-8 lg:pr-16 xl:pr-24">
-            <div className="relative mx-auto h-full w-full max-w-xs sm:max-w-sm md:mx-0 md:max-w-none md:w-1/2 lg:w-2/5">
+          <div className="pointer-events-none relative h-[340px] sm:h-[400px] md:absolute md:inset-x-0 md:bottom-0 md:top-32 md:z-[5] md:h-auto md:min-h-0 md:max-h-none md:flex md:items-end md:justify-end md:pr-4 lg:top-36 lg:pr-10 xl:pr-16">
+            <div className="relative mx-auto h-full w-full max-w-[17rem] sm:max-w-sm md:mx-0 md:max-w-none md:w-[52%] lg:w-[46%] xl:w-[42%]">
               <Image
-                src="/Christen - Hero.png"
+                src="/christen-hero-image.png"
                 alt="Christen Montero"
                 fill
+                sizes="(max-width: 768px) 20rem, 50vw"
                 className="object-contain object-bottom"
                 priority
               />
