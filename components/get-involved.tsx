@@ -169,7 +169,7 @@ export default function GetInvolved() {
         <TabsContent value="endorse" className="mt-0 rounded-lg border border-gray-200 bg-white p-6 shadow-sm md:p-8">
           <h3 className="mb-2 text-xl font-semibold text-navy-blue">Endorse Christen</h3>
           <p className="mb-6 text-gray-700">
-            Add your name to the growing coalition supporting Christen for Western Municipal Water District, Division 2.
+            Add your name to the growing coalition supporting Christen for the Western Municipal Water District, Division 2.
           </p>
           <form id="endorseForm" action={handleEndorseSubmit} className="relative space-y-4">
             <HoneypotField id="endorseWebsite" />

@@ -37,8 +37,8 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
         <div className="flex justify-between items-center gap-4">
           <Link
             href="/"
-            aria-label={`${campaign.candidateName} for Western Municipal Water District ${campaign.division}`}
-            className={`relative block h-12 w-[calc(3rem*1997/787)] shrink-0 md:h-16 md:w-[calc(4rem*1997/787)] lg:h-[4.5rem] lg:w-[calc(4.5rem*1997/787)] ${solid ? "" : "drop-shadow-md"}`}
+            aria-label={`${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`}
+            className={`relative block h-12 w-[calc(3rem*1997/787)] shrink-0 overflow-hidden md:h-16 md:w-[calc(4rem*1997/787)] lg:h-[4.5rem] lg:w-[calc(4.5rem*1997/787)] ${solid ? "" : "drop-shadow-md"}`}
           >
             <Image
               src="/logo-color.png"

@@ -12,8 +12,7 @@ export const campaign = {
   electionYear: 2026,
   website: "votechristen.com",
   email: "Hello@votechristen.com",
-  // TODO: CONFIRM CURRENT WMWD CAMPAIGN PHONE
-  phone: "951-406-4664",
+  phone: "951-406-0664",
   donationUrl: "https://www.efundraisingconnections.com/c/ChristenMontero/",
   // TODO: CONFIRM WMWD LEGAL COMMITTEE INFORMATION BEFORE REPLACING LIVE DISCLAIMER
   legal: {

@@ -30,9 +30,9 @@ import {
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Christen Montero's Priorities | Western Municipal Water District Division 2",
+  title: "Christen Montero's Priorities | The Western Municipal Water District Division 2",
   description:
-    "Explore Christen Montero's priorities for affordable water, reliable local supply, responsible infrastructure, conservation, and local jobs in Western Municipal Water District Division 2.",
+    "Explore Christen Montero's priorities for affordable water, reliable local supply, responsible infrastructure, conservation, and local jobs in the Western Municipal Water District Division 2.",
 }
 
 const sectionSurfaces = [
@@ -96,7 +96,7 @@ export default function PrioritiesPage() {
               Responsible Water Leadership Starts With Accountability
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-[17px] leading-[1.7] text-gray-700">
-              Western Municipal Water District manages an essential public resource. Christen believes every major decision should be evaluated through three questions:
+              The Western Municipal Water District manages an essential public resource. Christen believes every major decision should be evaluated through three questions:
             </p>
           </div>
           <div className="relative mx-auto max-w-5xl">
@@ -312,7 +312,7 @@ export default function PrioritiesPage() {
               Help Build a More Reliable Water Future
             </h2>
             <p className="mx-auto mb-10 max-w-xl text-lg leading-[1.7] text-white/90">
-              Join the campaign to bring practical, transparent, and community-focused leadership to Western Municipal Water District, Division 2.
+              Join the campaign to bring practical, transparent, and community-focused leadership to the Western Municipal Water District, Division 2.
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">

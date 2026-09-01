@@ -14,7 +14,7 @@ export default function SiteFooter() {
           <div>
             <Link
               href="/"
-              aria-label={`${campaign.candidateName} for Western Municipal Water District ${campaign.division}`}
+              aria-label={`${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`}
               className="relative mb-3 block h-14 w-[calc(3.5rem*1997/787)] md:h-16 md:w-[calc(4rem*1997/787)]"
             >
               <Image
@@ -26,7 +26,7 @@ export default function SiteFooter() {
               />
             </Link>
             <p className="max-w-[16rem] text-sm leading-relaxed text-white/70">
-              Candidate for Western Municipal Water District, {campaign.division}
+              Candidate for the Western Municipal Water District, {campaign.division}
             </p>
           </div>
 

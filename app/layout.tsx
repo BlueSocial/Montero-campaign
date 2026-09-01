@@ -20,8 +20,8 @@ const merriweather = Merriweather({
 })
 
 export const metadata: Metadata = {
-  title: `${campaign.candidateName} for Western Municipal Water District ${campaign.division}`,
-  description: `Official campaign website for ${campaign.candidateName}, candidate for ${campaign.officeFull}, ${campaign.division}.`,
+  title: `${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`,
+  description: `Official campaign website for ${campaign.candidateName}, candidate for the ${campaign.officeFull}, ${campaign.division}.`,
   icons: {
     icon: '/montero-favicon-dark.png',
     apple: '/montero-favicon-dark.png',

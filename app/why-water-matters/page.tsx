@@ -16,7 +16,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Why Your Water Board Matters | Christen Montero",
   description:
-    "Learn how Western Municipal Water District decisions affect water rates, reliability, infrastructure, conservation, and the future of Division 2.",
+    "Learn how the Western Municipal Water District's decisions affect water rates, reliability, infrastructure, conservation, and the future of Division 2.",
 }
 
 export default function WhyWaterMattersPage() {
@@ -37,7 +37,7 @@ export default function WhyWaterMattersPage() {
               Your water bill, the reliability of your local supply, the condition of critical infrastructure, and how our region prepares for drought are shaped by decisions most residents rarely see.
             </p>
             <p className="mx-auto mb-7 max-w-xl text-base leading-[1.7] text-white/90">
-              Western Municipal Water District helps make those decisions.
+              The Western Municipal Water District helps make those decisions.
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">
@@ -88,7 +88,7 @@ export default function WhyWaterMattersPage() {
               That&apos;s What Your Water Board Is For
             </h2>
             <p className="mb-4 text-[17px] leading-[1.7] text-gray-700">
-              Western Municipal Water District is governed by an elected Board of Directors. Board members help oversee budgets, long-term water planning, infrastructure investment, rate decisions, and the priorities that shape the district&apos;s future.
+              The Western Municipal Water District is governed by an elected Board of Directors. Board members help oversee budgets, long-term water planning, infrastructure investment, rate decisions, and the priorities that shape the district&apos;s future.
             </p>
             <p className="text-[17px] leading-[1.7] text-gray-700">
               That means this is not a ceremonial office. The person representing Division 2 has a responsibility to ask hard questions, understand how decisions affect ratepayers, and plan beyond the next budget cycle.
@@ -286,7 +286,7 @@ export default function WhyWaterMattersPage() {
               Help Elect Christen Montero
             </h2>
             <p className="mx-auto mb-8 max-w-xl text-lg leading-[1.7] text-white/90">
-              Join the campaign for affordable, reliable, and accountable water leadership in Western Municipal Water District, Division 2.
+              Join the campaign for affordable, reliable, and accountable water leadership in the Western Municipal Water District, Division 2.
             </p>
             <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <Button asChild className="h-11 bg-sky-blue px-8 text-base text-white shadow-lg hover:bg-sky-blue/90 md:h-12">

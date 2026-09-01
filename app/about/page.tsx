@@ -9,9 +9,9 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
 export const metadata: Metadata = {
-  title: `Meet Christen | ${campaign.candidateName} for Western Municipal Water District ${campaign.division}`,
+  title: `Meet Christen | ${campaign.candidateName} for the Western Municipal Water District ${campaign.division}`,
   description:
-    "Learn about Christen Montero, a lifelong Riverside resident, Planning Commissioner, agricultural operator, and small business leader running for Western Municipal Water District, Division 2.",
+    "Learn about Christen Montero, a lifelong Riverside resident, Planning Commissioner, agricultural operator, and small business leader running for the Western Municipal Water District, Division 2.",
 }
 
 function Portrait({
@@ -166,7 +166,7 @@ export default function AboutChristen() {
           <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16">
             <div className="order-2 md:order-1">
               <SectionEyebrow>Public service</SectionEyebrow>
-              <h2 className={headingClass}>Experience in Public Service</h2>
+              <h2 className={headingClass}>Asking the Hard Questions</h2>
               <div className="mb-5 h-0.5 w-10 bg-golden-yellow" aria-hidden="true" />
               <div className={bodyClass}>
                 <p>
@@ -176,7 +176,7 @@ export default function AboutChristen() {
                   This has given her firsthand experience asking the questions public leaders should ask: Can our infrastructure support growth? What will this decision cost communities over time? Are we planning responsibly? Are residents being heard?
                 </p>
                 <p>
-                  Those are the same questions that belong at Western Municipal Water District, where decisions about supply, rates, and infrastructure reach every household in Division 2.
+                  Those are the same questions that belong at the Western Municipal Water District, where decisions about supply, rates, and infrastructure reach every household in Division 2.
                 </p>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function AboutChristen() {
                   As Executive Director of LeftOver Love, Christen works with circular food and agricultural systems that recover usable resources and redirect them to support local farms and livestock operations. This work has reinforced a simple principle: responsible resource management can lower costs, reduce waste, and make communities more resilient.
                 </p>
                 <p>
-                  That practical perspective is one of the reasons Christen is running for Western Municipal Water District.
+                  That practical perspective is one of the reasons Christen is running for the Western Municipal Water District.
                 </p>
               </div>
 
@@ -240,7 +240,7 @@ export default function AboutChristen() {
             <div className="mb-6 h-0.5 w-10 bg-sky-blue" aria-hidden="true" />
             <div className="space-y-6 text-[17px] leading-[1.75] text-gray-700">
               <p>
-                Christen is running for Western Municipal Water District, Division 2 because decisions about water directly affect household budgets, local businesses, future development, and our region&apos;s ability to withstand drought and climate uncertainty.
+                Christen is running for the Western Municipal Water District, Division 2 because decisions about water directly affect household budgets, local businesses, future development, and our region&apos;s ability to withstand drought and climate uncertainty.
               </p>
               <p>
                 She believes ratepayers deserve transparent decisions, responsible investment, reliable local water supplies, and leadership focused on long-term solutions rather than short-term fixes.
@@ -302,7 +302,10 @@ export default function AboutChristen() {
                   When Christen isn&apos;t working, serving on the Planning Commission, or helping with agricultural operations, she values time with family, animals, and the Riverside community she has called home for most of her life.
                 </p>
                 <p>
-                  She can often be found hiking Mt. Rubidoux, running with her two white German Shepherds, or caring for her farm animals. A dancer since the age of four, she has long believed in the importance of balance and staying grounded. Christen holds a Bachelor of Arts and a Master of Business Administration from the University of Redlands.
+                  She can often be found hiking Mt. Rubidoux, running with her two white German Shepherds, or caring for her farm animals. A dancer since the age of four, she has long believed in the importance of balance and staying grounded.
+                </p>
+                <p>
+                  Christen holds a Bachelor of Arts from the University of Redlands, with a background in physics, education, and psychology, and a Master of Business Administration from the same university. She later completed post-graduate studies in controlled-environment agriculture systems at UC Riverside.
                 </p>
               </div>
             </div>

@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="relative overflow-hidden md:min-h-screen">
+      <section id="hero" className="relative overflow-hidden md:h-screen md:min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -34,13 +34,13 @@ export default function Home() {
 
         <WaveBackground />
 
-        <div className="relative z-10 flex flex-col md:min-h-screen">
+        <div className="relative z-10 flex flex-col md:h-full md:min-h-screen">
           {/* Copy sits above the portrait on mobile so it never crosses Christen's face */}
-          <div className="container mx-auto px-4 pt-[4.5rem] pb-3 md:absolute md:inset-0 md:z-10 md:flex md:items-center md:pt-0 md:pb-0">
+          <div className="container mx-auto px-4 pt-28 pb-3 md:absolute md:inset-x-0 md:bottom-0 md:top-28 md:z-10 md:flex md:items-center md:pt-0 md:pb-0">
             <div className="w-full max-w-xl text-left md:max-w-[46%] lg:max-w-[42%] xl:max-w-2xl">
-              <p className="mb-2 text-[10px] font-semibold uppercase leading-relaxed tracking-[0.16em] text-golden-yellow drop-shadow-md md:mb-4 md:text-xs md:tracking-[0.18em]">
+              <p className="mb-2 hidden text-[10px] font-semibold uppercase leading-relaxed tracking-[0.12em] text-golden-yellow drop-shadow-md md:mb-4 md:block md:text-xs md:tracking-[0.14em]">
                 <span className="block">Christen Montero for</span>
-                <span className="block">Western Municipal Water District — Division 2</span>
+                <span className="block">The Western Municipal Water District — Division 2</span>
               </p>
               <h1 className="mb-3 font-serif font-bold leading-[1.05] drop-shadow-lg md:mb-6">
                 <span className="block text-[2rem] text-white sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl">
@@ -51,7 +51,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="mb-5 max-w-xl text-[15px] leading-relaxed text-white drop-shadow-lg sm:text-lg md:mb-8 md:text-xl">
-                Water affects every household, every business, and every neighborhood. Christen Montero is running to protect ratepayers, strengthen our local water supply, and bring transparency and accountability to Western Municipal Water District.
+                Water affects every household, every business, and every neighborhood. Christen Montero is running to protect ratepayers, strengthen our local water supply, and bring transparency and accountability to the Western Municipal Water District.
               </p>
               <div className="flex max-w-md flex-col gap-2.5 sm:max-w-none sm:flex-row sm:gap-4">
                 <Button asChild className="h-11 w-full bg-sky-blue px-6 text-base text-white shadow-lg hover:bg-sky-blue/90 sm:w-auto md:h-12 md:px-8">
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
 
               <p className="mt-6 text-gray-700">
-                Through her work in local agriculture and regional food recovery, Christen has seen firsthand how responsible resource management can lower costs, reduce waste, and strengthen local communities. She is running to bring that same practical approach to Western Municipal Water District.
+                Through her work in local agriculture and regional food recovery, Christen has seen firsthand how responsible resource management can lower costs, reduce waste, and strengthen local communities. She is running to bring that same practical approach to the Western Municipal Water District.
               </p>
 
               <aside className="mt-8 border-l-4 border-golden-yellow bg-white px-5 py-4">

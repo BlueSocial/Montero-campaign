@@ -40,7 +40,7 @@ export default function WhyWaterBoard() {
           Why Your Water Board Matters
         </h2>
         <p className="mx-auto mb-12 max-w-3xl text-center text-lg leading-relaxed text-gray-700 md:mb-16">
-          Western Municipal Water District makes decisions that directly affect one of our most essential resources. From the cost of your water bill to the reliability of our local supply, these decisions reach every household and community.
+          The Western Municipal Water District makes decisions that directly affect one of our most essential resources. From the cost of your water bill to the reliability of our local supply, these decisions reach every household and community.
         </p>
 
         <div className="grid items-stretch gap-6 md:grid-cols-3 lg:gap-8">
