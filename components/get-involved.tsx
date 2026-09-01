@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -9,29 +9,49 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { submitForm } from "@/app/actions/form-actions"
 import { useToast } from "@/hooks/use-toast"
 
+function HoneypotField({ id }: { id: string }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute -left-[10000px] top-auto h-px w-px overflow-hidden"
+    >
+      <label htmlFor={id}>Website</label>
+      <input
+        id={id}
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        defaultValue=""
+      />
+    </div>
+  )
+}
+
 export default function GetInvolved() {
   const { toast } = useToast()
   const [endorseLoading, setEndorseLoading] = useState(false)
   const [volunteerLoading, setVolunteerLoading] = useState(false)
   const [hostLoading, setHostLoading] = useState(false)
+  const endorseInFlight = useRef(false)
+  const volunteerInFlight = useRef(false)
+  const hostInFlight = useRef(false)
 
   async function handleEndorseSubmit(formData: FormData) {
+    if (endorseInFlight.current) return
+    endorseInFlight.current = true
     setEndorseLoading(true)
     try {
       const result = await submitForm("endorse", formData)
-      console.log('Form submission result:', result)
-      
+
       if (result.success) {
-        console.log('Showing success toast')
         toast({
           title: "Success!",
           description: "Your endorsement has been submitted.",
         })
-        // Reset the form
         const form = document.getElementById("endorseForm") as HTMLFormElement
         form?.reset()
       } else {
-        console.log('Showing error toast:', result.message)
         toast({
           title: "Error",
           description: result.message,
@@ -45,11 +65,14 @@ export default function GetInvolved() {
         variant: "destructive",
       })
     } finally {
+      endorseInFlight.current = false
       setEndorseLoading(false)
     }
   }
 
   async function handleVolunteerSubmit(formData: FormData) {
+    if (volunteerInFlight.current) return
+    volunteerInFlight.current = true
     setVolunteerLoading(true)
     try {
       const result = await submitForm("volunteer", formData)
@@ -58,7 +81,6 @@ export default function GetInvolved() {
           title: "Success!",
           description: "Your volunteer application has been submitted.",
         })
-        // Reset the form
         const form = document.getElementById("volunteerForm") as HTMLFormElement
         form?.reset()
       } else {
@@ -75,11 +97,14 @@ export default function GetInvolved() {
         variant: "destructive",
       })
     } finally {
+      volunteerInFlight.current = false
       setVolunteerLoading(false)
     }
   }
 
   async function handleHostSubmit(formData: FormData) {
+    if (hostInFlight.current) return
+    hostInFlight.current = true
     setHostLoading(true)
     try {
       const result = await submitForm("host", formData)
@@ -88,7 +113,6 @@ export default function GetInvolved() {
           title: "Success!",
           description: "Your event hosting request has been submitted.",
         })
-        // Reset the form
         const form = document.getElementById("hostForm") as HTMLFormElement
         form?.reset()
       } else {
@@ -105,6 +129,7 @@ export default function GetInvolved() {
         variant: "destructive",
       })
     } finally {
+      hostInFlight.current = false
       setHostLoading(false)
     }
   }
@@ -146,7 +171,8 @@ export default function GetInvolved() {
           <p className="mb-6 text-gray-700">
             Add your name to the growing coalition supporting Christen for Western Municipal Water District, Division 2.
           </p>
-          <form id="endorseForm" action={handleEndorseSubmit} className="space-y-4">
+          <form id="endorseForm" action={handleEndorseSubmit} className="relative space-y-4">
+            <HoneypotField id="endorseWebsite" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -205,6 +231,7 @@ export default function GetInvolved() {
           <div className="mt-6 pt-4 border-t border-gray-200">
             <div className="flex items-start space-x-2 mb-3">
               <Checkbox id="optIn" name="optIn" required />
+              {/* TODO: PHASE 6C.2 — IMPLEMENT SMS CONSENT ONLY AFTER CAMPAIGN SMS PROGRAM IS CONFIRMED */}
               {/* TODO: CONFIRM WMWD CAMPAIGN SMS / COMMITTEE LEGAL NAME */}
               <label htmlFor="optIn" className="text-xs text-gray-600 leading-relaxed">
                 I agree to the{' '}
@@ -222,7 +249,8 @@ export default function GetInvolved() {
           <p className="mb-6 text-gray-700">
             Help us reach voters across Division 2 and build a people-powered campaign for affordable, reliable water.
           </p>
-          <form id="volunteerForm" action={handleVolunteerSubmit} className="space-y-4">
+          <form id="volunteerForm" action={handleVolunteerSubmit} className="relative space-y-4">
+            <HoneypotField id="volunteerWebsite" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="volFirstName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -267,6 +295,7 @@ export default function GetInvolved() {
           <div className="mt-6 pt-4 border-t border-gray-200">
             <div className="flex items-start space-x-2 mb-3">
               <Checkbox id="volOptIn" name="optIn" required />
+              {/* TODO: PHASE 6C.2 — IMPLEMENT SMS CONSENT ONLY AFTER CAMPAIGN SMS PROGRAM IS CONFIRMED */}
               {/* TODO: CONFIRM WMWD CAMPAIGN SMS / COMMITTEE LEGAL NAME */}
               <label htmlFor="volOptIn" className="text-xs text-gray-600 leading-relaxed">
                 I agree to the{' '}
@@ -284,7 +313,8 @@ export default function GetInvolved() {
           <p className="mb-6 text-gray-700">
             Bring neighbors together to meet Christen, learn why this Water Board race matters, and help grow the campaign in your community.
           </p>
-          <form id="hostForm" action={handleHostSubmit} className="space-y-4">
+          <form id="hostForm" action={handleHostSubmit} className="relative space-y-4">
+            <HoneypotField id="hostWebsite" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="hostFirstName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -335,6 +365,7 @@ export default function GetInvolved() {
           <div className="mt-6 pt-4 border-t border-gray-200">
             <div className="flex items-start space-x-2 mb-3">
               <Checkbox id="hostOptIn" name="optIn" required />
+              {/* TODO: PHASE 6C.2 — IMPLEMENT SMS CONSENT ONLY AFTER CAMPAIGN SMS PROGRAM IS CONFIRMED */}
               {/* TODO: CONFIRM WMWD CAMPAIGN SMS / COMMITTEE LEGAL NAME */}
               <label htmlFor="hostOptIn" className="text-xs text-gray-600 leading-relaxed">
                 I agree to the{' '}
