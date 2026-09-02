@@ -60,7 +60,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
 
           {/* Desktop Navigation */}
           <nav className="hidden items-center space-x-5 lg:flex lg:space-x-8">
-            <Link href="/#about" scroll={false} className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
+            <Link href="/about" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Meet Christen
             </Link>
             <Link href="/priorities" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
@@ -103,7 +103,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
         <div className="bg-white shadow-lg lg:hidden">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/#about" scroll={false} className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/about" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Meet Christen
               </Link>
               <Link href="/priorities" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
