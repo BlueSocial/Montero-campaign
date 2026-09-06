@@ -58,6 +58,24 @@ export const endorsements = [
     featured: false,
     confirmed: true,
   },
+  {
+    id: "denise-davis",
+    name: "Denise Davis",
+    title: "Redlands City Council Member / Emerge Alumni",
+    quote: null,
+    image: "/Denise-Davis.png",
+    featured: false,
+    confirmed: true,
+  },
+  {
+    id: "andy-melendrez",
+    name: "Andy Melendrez",
+    title: "Riverside City Councilman",
+    quote: null,
+    image: "/Andy-Melendrez.png",
+    featured: false,
+    confirmed: true,
+  },
   // Archived City Council-era endorsement — do not render on the WMWD homepage.
   {
     id: "jose-medina",
