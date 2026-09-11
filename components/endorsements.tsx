@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { Check } from "lucide-react"
 import { publicEndorsements } from "@/lib/endorsements"
 
 export default function Endorsements() {
@@ -20,13 +21,22 @@ export default function Endorsements() {
               className="flex items-center gap-4 rounded-lg border border-gray-200 bg-gray-50/80 px-5 py-4"
             >
               <span className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-full bg-gray-200 ring-2 ring-golden-yellow/40">
-                <Image
-                  src={encodeURI(endorsement.image)}
-                  alt=""
-                  fill
-                  sizes="72px"
-                  className="object-cover object-[center_18%]"
-                />
+                {endorsement.image ? (
+                  <Image
+                    src={encodeURI(endorsement.image)}
+                    alt=""
+                    fill
+                    sizes="72px"
+                    className="object-cover object-[center_18%]"
+                  />
+                ) : (
+                  <span
+                    className="flex h-full w-full items-center justify-center bg-golden-yellow/25 text-navy-blue"
+                    aria-hidden="true"
+                  >
+                    <Check className="h-5 w-5" strokeWidth={2.5} />
+                  </span>
+                )}
               </span>
               <div>
                 <p className="font-serif text-lg font-bold uppercase tracking-wide text-navy-blue">

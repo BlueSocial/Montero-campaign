@@ -76,6 +76,15 @@ export const endorsements = [
     featured: false,
     confirmed: true,
   },
+  {
+    id: "mark-pulido",
+    name: "Mark Pulido",
+    title: "Mayor Pro Tem - City of Cerritos",
+    quote: null,
+    image: "/Mark-Pulido.png",
+    featured: false,
+    confirmed: true,
+  },
   // Archived City Council-era endorsement — do not render on the WMWD homepage.
   {
     id: "jose-medina",
