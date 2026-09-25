@@ -59,7 +59,7 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center space-x-5 lg:flex lg:space-x-8">
+          <nav className="hidden items-center space-x-4 lg:flex xl:space-x-6">
             <Link href="/about" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Meet Christen
             </Link>
@@ -68,6 +68,9 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
             </Link>
             <Link href="/why-water-matters" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Why Water Matters
+            </Link>
+            <Link href="/events" className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
+              Events
             </Link>
             <Link href="/#get-involved" scroll={false} className={`font-medium transition-colors ${solid ? "text-navy-blue hover:text-sky-blue" : "text-white hover:text-golden-yellow"}`}>
               Get Involved
@@ -111,6 +114,9 @@ export default function Header({ alwaysSolid = false }: { alwaysSolid?: boolean 
               </Link>
               <Link href="/why-water-matters" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Why Water Matters
+              </Link>
+              <Link href="/events" className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
+                Events
               </Link>
               <Link href="/#get-involved" scroll={false} className="text-navy-blue block py-2" onClick={() => setMobileMenuOpen(false)}>
                 Get Involved

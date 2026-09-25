@@ -101,3 +101,17 @@ export const endorsements = [
 export type Endorsement = (typeof endorsements)[number]
 
 export const publicEndorsements = endorsements.filter((endorsement) => endorsement.confirmed)
+
+/** Organizational endorsements, shown separately from individual leaders. */
+export const organizationEndorsements = [
+  {
+    id: "riverside-county-democratic-party",
+    name: "Riverside County Democratic Party",
+    image: "/cropped-RCDP-logo-trans.webp",
+  },
+  {
+    id: "riverside-county-young-democrats",
+    name: "Riverside County Young Democrats",
+    image: "/RCYD Logo Final small.png",
+  },
+] as const

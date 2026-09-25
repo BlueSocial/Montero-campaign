@@ -10,6 +10,7 @@ import CampaignPriorities from "@/components/campaign-priorities"
 import DonationForm from "@/components/donation-form"
 import GetInvolved from "@/components/get-involved"
 import Endorsements from "@/components/endorsements"
+import OrganizationEndorsements from "@/components/organization-endorsements"
 import Link from "next/link"
 import { campaign } from "@/lib/campaign"
 
@@ -113,6 +114,8 @@ export default function Home() {
           <path fill="currentColor" d="M0 48C360 8 1080 8 1440 48H0Z" />
         </svg>
       </section>
+
+      <OrganizationEndorsements />
 
       <WhyWaterBoard />
 
