@@ -85,9 +85,8 @@ export default function SiteFooter() {
 
         <div className="mx-auto mt-8 max-w-2xl">
           <div className="rounded-sm border border-white/15 bg-[#f4f0e6] px-4 py-3.5 text-center sm:px-6">
-            {/* TODO: CONFIRM WMWD LEGAL COMMITTEE INFORMATION BEFORE REPLACING LIVE DISCLAIMER — see campaign.legal */}
             <p className="text-[13px] leading-relaxed text-navy-blue">
-              Paid for by Christen Montero for Riverside City Council Ward 2 2026 ID# 1481381 c/o 728 W. Edna Place, Covina, CA 91722
+              {campaign.legal.paidForBy}
             </p>
           </div>
         </div>

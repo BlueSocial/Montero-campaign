@@ -2,8 +2,6 @@
  * Confirmed public campaign identity for the WMWD Division 2 race.
  * Keep this file limited to non-sensitive facts used in more than one place.
  */
-type UnconfirmedLegalField = string | null
-
 export const campaign = {
   candidateName: "Christen Montero",
   officeFull: "Western Municipal Water District Board of Directors",
@@ -14,12 +12,12 @@ export const campaign = {
   email: "Hello@votechristen.com",
   phone: "951-406-0664",
   donationUrl: "https://www.efundraisingconnections.com/c/ChristenMontero/",
-  // TODO: CONFIRM WMWD LEGAL COMMITTEE INFORMATION BEFORE REPLACING LIVE DISCLAIMER
   legal: {
-    committeeName: null as UnconfirmedLegalField,
-    fppcId: null as UnconfirmedLegalField,
-    campaignAddress: null as UnconfirmedLegalField,
-    paidForBy: null as UnconfirmedLegalField,
+    committeeName: "Christen Montero for Western Municipal Water District Division 2 2026",
+    fppcId: "1494498",
+    campaignAddress: "1398 N Candleberry rd. Colton, CA 92324",
+    paidForBy:
+      "Paid for by Christen Montero for Western Municipal Water District Division 2 2026 #1494498 1398 N Candleberry rd. Colton, CA 92324.",
   },
 } as const
 

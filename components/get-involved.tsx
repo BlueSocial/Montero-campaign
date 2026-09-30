@@ -238,7 +238,7 @@ export default function GetInvolved() {
                 <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
                   privacy policy
                 </a>{' '}
-                and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+                and to receive messages from Christen Montero for Western Municipal Water District Division 2 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
               </label>
             </div>
           </div>
@@ -302,7 +302,7 @@ export default function GetInvolved() {
                 <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
                   privacy policy
                 </a>{' '}
-                and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+                and to receive messages from Christen Montero for Western Municipal Water District Division 2 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
               </label>
             </div>
           </div>
@@ -372,7 +372,7 @@ export default function GetInvolved() {
                 <a href="/privacy-policy" className="underline hover:text-navy-blue transition-colors">
                   privacy policy
                 </a>{' '}
-                and to receive messages from Christen Montero for Riverside City Council 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
+                and to receive messages from Christen Montero for Western Municipal Water District Division 2 2026 (messages may include donation links). Message frequency varies. Message & Data Rates May Apply. Reply HELP for help. Reply STOP to opt out.
               </label>
             </div>
           </div>

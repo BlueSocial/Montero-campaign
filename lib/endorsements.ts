@@ -85,6 +85,15 @@ export const endorsements = [
     featured: false,
     confirmed: true,
   },
+  {
+    id: "adan-ortega",
+    name: "Adan Ortega Jr.",
+    title: "Chairman of Metropolitan Water District of Southern California",
+    quote: null,
+    image: "/Adan-Ortega.png",
+    featured: false,
+    confirmed: true,
+  },
   // Archived City Council-era endorsement — do not render on the WMWD homepage.
   {
     id: "jose-medina",
